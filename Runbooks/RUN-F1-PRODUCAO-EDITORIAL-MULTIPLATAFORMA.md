@@ -2,8 +2,38 @@
 
 **Fonte:** Process Document Produção Editorial Multiplataforma `PD-CLB-20260922-F01-DOC-V02`  
 **Epic inicial:** `F1-3X`  
-**Owner:** A_DEFINIR  
-**Cadência documental:** 15 dias/ciclo. A ficha F1-3X registra 17 dias/pack; datas ficam pendentes até decisão.
+**Owner:** `executar-23`  
+**Cadência documental:** 15 dias/ciclo no Process Document. A ficha F1-3X registra 17 dias/pack. O calendário operacional importado do ZIP cobre 15 unidades editoriais de 2026-09-28 a 2026-10-16; ele não substitui silenciosamente a cadência do ciclo completo.
+
+
+## Rastreio operacional — F1-3X
+
+- **Epic:** [#2 — F1-3X](https://github.com/executar-23/Copiloto-ops/issues/2)
+- **Assignee/owner operacional:** `executar-23`
+- **Preparação técnica:** [#6](https://github.com/executar-23/Copiloto-ops/issues/6)
+- **SETUP-001:** [#7](https://github.com/executar-23/Copiloto-ops/issues/7) — 2026-09-27 — porta `G-SCAFFOLD`
+- **Documento editorial mestre:** `DOC-20260926-0002`
+- **Documento de arquitetura:** `DOC-20260926-0003`
+
+### Ciclo 1 / Pilar 1 — Riscos Cognitivos
+- Issue de ciclo: [#3](https://github.com/executar-23/Copiloto-ops/issues/3)
+- Janela: **2026-09-28 → 2026-10-02**
+- Unidades: #8–#12
+- Porta final: `G-PILAR1`
+
+### Ciclo 2 / Pilar 2 — Processos Neuroadaptativos
+- Issue de ciclo: [#4](https://github.com/executar-23/Copiloto-ops/issues/4)
+- Janela: **2026-10-05 → 2026-10-09**
+- Unidades: #13–#17
+- Porta final: `G-PILAR2`
+
+### Ciclo 3 / Pilar 3 — Ferramentas e Soluções
+- Issue de ciclo: [#5](https://github.com/executar-23/Copiloto-ops/issues/5)
+- Janela: **2026-10-12 → 2026-10-16**
+- Unidades: #18–#22
+- Porta final: `G-PILAR3`
+
+As janelas acima vêm de `blog-riscos-cognitivos-tres-pilares_DADOS.csv`. A associação ciclo↔pilar foi registrada como direção operacional e deve ser confirmada no Topic Pack de cada ciclo antes de promover o estado para `STRUCTURED`.
 
 ## Objetivo
 Executar um ciclo editorial rastreável em que uma peça-mãe profunda e citável gera derivados nativos por canal, com governança, revisão e handoff controlado.
