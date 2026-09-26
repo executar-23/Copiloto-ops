@@ -10,8 +10,9 @@ Identifique objetivo, aceite e dados necessários. Consulte o [Runner](https://a
 1. Confirme URL/ID da página Notion e os identificadores nela presentes. Não invente relações.
 2. Antes de abrir Issue, confirme escopo, Epic local, labels efetivamente existentes, gate, owner e capacidade de vínculo. Ausência de dado material: pergunte.
 3. Inclua URL/ID Notion e critérios de aceite na Issue. Ao executar, registre Issue/commit e resultado no Master Index. Decisão relevante vai para ADR.
-4. WIP=1, approval:pendente inicial se disponível e aprovação só humana. Sem owner: A_DEFINIR. Sem gate: gate:tbd.
-5. Valide resultado nas duas plataformas. Links não sincronizam estado nem transferem permissões.
+4. WIP=1 por agente; agentes diferentes podem atuar simultaneamente. approval:pendente inicial se disponível e aprovação só humana. Sem owner: A_DEFINIR. Sem gate: gate:tbd.
+5. Para arquivos deste repositório, siga o ADR aceito no README: sync → inspect → change → validate → commit → sync diretamente em main. Inspecione alterações concorrentes, execute validações aplicáveis, revise diff, não force-push e pare diante de conflito sem resolução inequívoca. Observe CI e corrija/reverta regressões introduzidas.
+6. Valide resultado nas duas plataformas. Links não sincronizam estado nem transferem permissões.
 
 ## Saída
 Informe páginas consultadas, Issue/commit, validações, pendências e próxima ação única. Não declare como criados Project, labels, milestones ou Epics que ainda são propostas.
