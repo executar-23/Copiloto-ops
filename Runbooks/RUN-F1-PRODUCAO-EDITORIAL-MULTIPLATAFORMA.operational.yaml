@@ -1,0 +1,55 @@
+operational_overlay:
+  applies_to: Runbooks/RUN-F1-PRODUCAO-EDITORIAL-MULTIPLATAFORMA.yaml
+  source_commit: 0fe6430a2b8cf7e109376b4db3c9dbd04f4d8d38
+  epic:
+    id: F1-3X
+    issue: 2
+    url: https://github.com/executar-23/Copiloto-ops/issues/2
+  owner_operational: executar-23
+  cadence:
+    process_document: 15 dias/ciclo
+    f1_3x_sheet: 17 dias/pack
+    imported_calendar:
+      source: blog-riscos-cognitivos-tres-pilares_DADOS.csv
+      start: 2026-09-28
+      end: 2026-10-16
+      units: 15
+    rule: O calendário operacional importado não substitui silenciosamente a cadência do ciclo completo.
+  tracking:
+    preparation:
+      issue: 6
+      url: https://github.com/executar-23/Copiloto-ops/issues/6
+    setup:
+      id: SETUP-001
+      issue: 7
+      date: 2026-09-27
+      gate: G-SCAFFOLD
+      url: https://github.com/executar-23/Copiloto-ops/issues/7
+    master_editorial_document: DOC-20260926-0002
+    architecture_document: DOC-20260926-0003
+    cycles:
+    - cycle: 1
+      pillar: Pilar 1 — Riscos Cognitivos
+      issue: 3
+      window:
+        start: 2026-09-28
+        end: 2026-10-02
+      units: '#8–#12'
+      final_gate: G-PILAR1
+    - cycle: 2
+      pillar: Pilar 2 — Processos Neuroadaptativos
+      issue: 4
+      window:
+        start: 2026-10-05
+        end: 2026-10-09
+      units: '#13–#17'
+      final_gate: G-PILAR2
+    - cycle: 3
+      pillar: Pilar 3 — Ferramentas e Soluções
+      issue: 5
+      window:
+        start: 2026-10-12
+        end: 2026-10-16
+      units: '#18–#22'
+      final_gate: G-PILAR3
+  validation_rule: A associação ciclo↔pilar é direção operacional e deve ser confirmada no Topic Pack de cada ciclo antes de promover o estado para STRUCTURED.
