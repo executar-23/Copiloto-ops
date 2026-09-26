@@ -68,6 +68,11 @@ O schema operacional foi definido em [docs/SCHEMA-TRABALHO.md](../../docs/SCHEMA
 
 ## Primeiro Epic
 
-O primeiro resultado operacional é `F1-3X`: três ciclos editoriais executados pelo [Runbook de Produção Editorial Multiplataforma](../../Runbooks/RUN-F1-PRODUCAO-EDITORIAL-MULTIPLATAFORMA.md), cada um concluído em `100% VERIFIED`.
+- [Epic #2 — F1-3X: Banco editorial de lançamento](https://github.com/executar-23/Copiloto-ops/issues/2)
+- [Issue #3 — Ciclo editorial 1 de 3](https://github.com/executar-23/Copiloto-ops/issues/3)
+- [Issue #4 — Ciclo editorial 2 de 3](https://github.com/executar-23/Copiloto-ops/issues/4)
+- [Issue #5 — Ciclo editorial 3 de 3](https://github.com/executar-23/Copiloto-ops/issues/5)
+
+O resultado operacional é três ciclos editoriais executados pelo [Runbook de Produção Editorial Multiplataforma](../../Runbooks/RUN-F1-PRODUCAO-EDITORIAL-MULTIPLATAFORMA.md), cada um concluído em `100% VERIFIED`.
 
 A cadência ainda precisa de decisão: o Process Document registra 15 dias/ciclo, enquanto a ficha F1-3X registra 17 dias/pack e cerca de 45 dias para o arco. Não fixar datas até resolver essa divergência.
