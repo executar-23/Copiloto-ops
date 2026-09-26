@@ -1,0 +1,535 @@
+runbook:
+  title: Process Document Produção Editorial Multiplataforma
+  description: Este documento transforma o padrão editorial existente em um processo operacional rastreável para ciclos de 15 dias, da validação do tema ao handoff para produção visual. A conclusão de cada ciclo depende de evidência objetiva, revisão editorial e registro do pacote produzido.
+  metadata:
+    id: PD-CLB-20260922-F01-DOC-V02
+    owner: A DEFINIR
+    last_update: 22/09/2026
+    review_cadence: A cada ciclo de 15 dias e revisão trimestral do padrão
+    status: PREPARED
+    source: PD-CLB-20260906-F01-DOC-V01 process doc padrão multiplataforma
+  purpose: Padronizar a produção editorial multiplataforma do modelo Creator Led Business, garantindo que uma peça-mãe profunda e citável gere derivados nativos por canal, com governança, qualidade, evidências e handoff controlado.
+  scope:
+    included:
+    - Validação do tema e coleta de evidências.
+    - Definição do Topic Pack e do CTA associado.
+    - Produção do artigo e vídeo mãe.
+    - Derivação de textos, vídeos curtos, carrosséis, imagens, stories, newsletters e ebooks.
+    - Otimização GEO e SEO, revisão editorial, nomenclatura, indexação e handoff.
+    - Entry Gate de quatro dias, métricas, exceções e governança de automações.
+    excluded:
+    - Produção final de imagens e vídeos, que pertence à Fase 2.
+    - Publicação, distribuição e análise de desempenho, cobertas pelas Fases 4 e 5.
+    - Definição de pessoas responsáveis enquanto o owner formal não estiver aprovado.
+    - Publicação automática sem revisão e aprovação explícitas.
+  inputs_outputs:
+  - type: Input
+    item: Sinal de dor real
+    minimum_criterion: Comentário, pergunta, dado de uso ou demanda recorrente.
+  - type: Input
+    item: Tema do ciclo
+    minimum_criterion: Encaixe de nicho e potencial de Topic Pack confirmados.
+  - type: Input
+    item: Fontes e evidências
+    minimum_criterion: Claims relevantes com fonte citável e data de consulta.
+  - type: Input
+    item: Roadmap e arco temático
+    minimum_criterion: Posição do ciclo e dependências visíveis.
+  - type: Output
+    item: Peça-mãe
+    minimum_criterion: Artigo de 1.800 a 2.400 palavras e roteiro de vídeo de 8 a 12 minutos.
+  - type: Output
+    item: Pacote de derivados
+    minimum_criterion: Volumes e formatos previstos na matriz de ativos.
+  - type: Output
+    item: Handoff da Fase 2
+    minimum_criterion: Briefings por asset, especificações, nomes e evidências.
+  raci_matrix:
+  - stage: Validar tema e Topic Pack
+    responsible: Estrategista editorial
+    accountable: Owner editorial - A DEFINIR
+    consulted: Analytics, produto e comunidade
+    informed: Equipe de produção
+  - stage: Pesquisar evidências
+    responsible: Pesquisador
+    accountable: Editor responsável
+    consulted: Especialista do tema
+    informed: Estrategista editorial
+  - stage: Produzir peça-mãe
+    responsible: Produtor editorial
+    accountable: Owner editorial - A DEFINIR
+    consulted: Pesquisador e revisor
+    informed: Produção de vídeo
+  - stage: Revisar estilo, GEO e SEO
+    responsible: Revisor editorial
+    accountable: Editor responsável
+    consulted: Pesquisador
+    informed: Owner editorial
+  - stage: Produzir derivados
+    responsible: Produtores por formato
+    accountable: Owner editorial - A DEFINIR
+    consulted: Direção criativa
+    informed: Operador de governança
+  - stage: Indexar e versionar
+    responsible: Operador de governança
+    accountable: Owner editorial - A DEFINIR
+    consulted: Produtores
+    informed: Equipe da Fase 2
+  - stage: Aprovar handoff
+    responsible: Owner editorial
+    accountable: Owner editorial - A DEFINIR
+    consulted: Revisor e direção criativa
+    informed: Equipe da Fase 2
+  - stage: Medir e replanejar
+    responsible: Analytics
+    accountable: Owner editorial - A DEFINIR
+    consulted: Produto e distribuição
+    informed: Todos os envolvidos
+  process_flow:
+  - Validar tema, dor e encaixe de nicho.
+  - Pesquisar evidências e fechar o Topic Pack.
+  - Estruturar e produzir a peça-mãe.
+  - Revisar estilo, GEO, SEO e marcação de trechos-fonte.
+  - Produzir derivados nativos por canal.
+  - Mapear CTAs, conferir arco temático e indexar arquivos.
+  - Executar checklist de conformidade e liberar handoff.
+  - Publicar, medir e retroalimentar o próximo ciclo nas fases subsequentes.
+  state_model:
+  - status: 0% PLANNED
+    meaning: Ciclo definido, ainda não iniciado.
+    minimum_evidence: Tema, objetivo e owner de ciclo registrados.
+  - status: 33% STRUCTURED
+    meaning: Topic Pack, fontes, outline e dependências estruturados.
+    minimum_evidence: Briefing e plano do ciclo.
+  - status: 66% IMPLEMENTED
+    meaning: Peça-mãe funcional e derivados em produção.
+    minimum_evidence: Arquivos de trabalho versionados.
+  - status: 99% PRODUCED
+    meaning: Pacote pronto, aguardando revisão final ou handoff.
+    minimum_evidence: Checklist quase concluído e pacote organizado.
+  - status: 100% VERIFIED
+    meaning: Pacote revisado, evidenciado e aceito pela etapa seguinte.
+    minimum_evidence: Handoff confirmado e registro atualizado.
+  detailed_steps:
+  - step: 1
+    name: Validação do tema do ciclo
+    who: Estrategista editorial
+    when: Na abertura do ciclo de 15 dias.
+    how: Confirmar que o tema nasce de dor real (comentário, dado de uso do app/agente, pergunta recorrente) e tem encaixe de nicho.
+    output: Confirmar que o tema nasce de dor real (comentário, dado de uso do app/agente, pergunta recorrente) e tem encaixe de nicho.
+    evidence: Registro da dor validada, fonte do sinal e decisão de tema.
+    done: A etapa só fecha quando a entrega estiver registrada, revisada conforme aplicável e vinculada ao ciclo.
+  - step: 2
+    name: Pesquisa e levantamento de evidências
+    who: Pesquisador ou editor de evidências
+    when: Na abertura do ciclo de 15 dias.
+    how: Reunir dados, estudos e fontes citáveis que sustentam o(s) claim(s) centrais do ciclo.
+    output: Reunir dados, estudos e fontes citáveis que sustentam o(s) claim(s) centrais do ciclo.
+    evidence: Lista de fontes, notas de pesquisa e claims sustentados.
+    done: A etapa só fecha quando a entrega estiver registrada, revisada conforme aplicável e vinculada ao ciclo.
+  - step: 3
+    name: Definição do Topic Pack
+    who: Estrategista editorial
+    when: Na abertura do ciclo de 15 dias.
+    how: Fechar título de trabalho, CTA e ferramenta associada ao ciclo.
+    output: Fechar título de trabalho, CTA e ferramenta associada ao ciclo.
+    evidence: Artefato da etapa, link de registro e status no controle central.
+    done: A etapa só fecha quando a entrega estiver registrada, revisada conforme aplicável e vinculada ao ciclo.
+  - step: 4
+    name: Outline da peça-mãe
+    who: Produtor editorial
+    when: Após a validação do tema e antes da produção dos derivados.
+    how: Estrutura do artigo em blocos (Tópico 5.2), já marcando Claim/Evidência/Exemplo/Interpretação por bloco.
+    output: Estrutura do artigo em blocos (Tópico 5.2), já marcando Claim/Evidência/Exemplo/Interpretação por bloco.
+    evidence: Artefato da etapa, link de registro e status no controle central.
+    done: A etapa só fecha quando a entrega estiver registrada, revisada conforme aplicável e vinculada ao ciclo.
+  - step: 5
+    name: Redação do artigo mãe
+    who: Produtor editorial
+    when: Após a validação do tema e antes da produção dos derivados.
+    how: Texto final de 1.800–2.400 palavras, com exemplos práticos e ao menos um tutorial passo a passo.
+    output: Texto final de 1.800–2.400 palavras, com exemplos práticos e ao menos um tutorial passo a passo.
+    evidence: Arquivo versionado da entrega redação do artigo mãe e checklist de revisão.
+    done: A etapa só fecha quando a entrega estiver registrada, revisada conforme aplicável e vinculada ao ciclo.
+  - step: 6
+    name: Revisão de estilo editorial
+    who: Revisor editorial
+    when: Após a validação do tema e antes da produção dos derivados.
+    how: Checklist da Tabela 3.1 aplicado linha a linha (didático, prático, evidências, zero coach, jornalístico).
+    output: Checklist da Tabela 3.1 aplicado linha a linha (didático, prático, evidências, zero coach, jornalístico).
+    evidence: Checklist preenchido, ajustes registrados e aprovação explícita.
+    done: A etapa só fecha quando a entrega estiver registrada, revisada conforme aplicável e vinculada ao ciclo.
+  - step: 7
+    name: Otimização GEO/SEO do artigo
+    who: Pesquisador ou editor de evidências
+    when: Após a validação do tema e antes da produção dos derivados.
+    how: Estrutura de perguntas e respostas diretas, dados em destaque, hierarquia de títulos, fontes citadas.
+    output: Estrutura de perguntas e respostas diretas, dados em destaque, hierarquia de títulos, fontes citadas.
+    evidence: Checklist preenchido, ajustes registrados e aprovação explícita.
+    done: A etapa só fecha quando a entrega estiver registrada, revisada conforme aplicável e vinculada ao ciclo.
+  - step: 8
+    name: Roteiro do vídeo mãe (8–12 min)
+    who: Produtor editorial
+    when: Após a validação do tema e antes da produção dos derivados.
+    how: Roteiro com gancho, blocos espelhando o artigo e chamada para os derivados.
+    output: Roteiro com gancho, blocos espelhando o artigo e chamada para os derivados.
+    evidence: Arquivo versionado da entrega roteiro do vídeo mãe (8–12 min) e checklist de revisão.
+    done: A etapa só fecha quando a entrega estiver registrada, revisada conforme aplicável e vinculada ao ciclo.
+  - step: 9
+    name: Marcação de trechos-fonte para derivados
+    who: Produtor editorial
+    when: Após a validação do tema e antes da produção dos derivados.
+    how: Sinalizar no artigo e no roteiro do vídeo quais trechos/timestamps viram qual derivado.
+    output: Sinalizar no artigo e no roteiro do vídeo quais trechos/timestamps viram qual derivado.
+    evidence: Artefato da etapa, link de registro e status no controle central.
+    done: A etapa só fecha quando a entrega estiver registrada, revisada conforme aplicável e vinculada ao ciclo.
+  - step: 10
+    name: Banco de derivados — textos curtos
+    who: Produtor editorial
+    when: Depois da peça-mãe aprovada e antes do controle final.
+    how: Legendas e posts para Instagram, LinkedIn, TikTok e Shorts a partir dos trechos marcados.
+    output: Legendas e posts para Instagram, LinkedIn, TikTok e Shorts a partir dos trechos marcados.
+    evidence: Arquivo versionado da entrega banco de derivados — textos curtos e checklist de revisão.
+    done: A etapa só fecha quando a entrega estiver registrada, revisada conforme aplicável e vinculada ao ciclo.
+  - step: 11
+    name: Roteiro dos 4 vídeos verticais
+    who: Produtor de vídeo
+    when: Depois da peça-mãe aprovada e antes do controle final.
+    how: Cortes do vídeo mãe adaptados a Reels/TikTok/Shorts, com gancho próprio nos primeiros segundos.
+    output: Cortes do vídeo mãe adaptados a Reels/TikTok/Shorts, com gancho próprio nos primeiros segundos.
+    evidence: Arquivo versionado da entrega roteiro dos 4 vídeos verticais e checklist de revisão.
+    done: A etapa só fecha quando a entrega estiver registrada, revisada conforme aplicável e vinculada ao ciclo.
+  - step: 12
+    name: Roteiro/copy dos 6 carrosséis
+    who: Produtor editorial
+    when: Depois da peça-mãe aprovada e antes do controle final.
+    how: Sequência de slides por carrossel, com uma ideia por slide.
+    output: Sequência de slides por carrossel, com uma ideia por slide.
+    evidence: Arquivo versionado da entrega roteiro/copy dos 6 carrosséis e checklist de revisão.
+    done: A etapa só fecha quando a entrega estiver registrada, revisada conforme aplicável e vinculada ao ciclo.
+  - step: 13
+    name: Copy das 6 imagens estáticas
+    who: Produtor editorial
+    when: Depois da peça-mãe aprovada e antes do controle final.
+    how: Texto de apoio e legenda de cada imagem do ciclo.
+    output: Texto de apoio e legenda de cada imagem do ciclo.
+    evidence: Arquivo versionado da entrega copy das 6 imagens estáticas e checklist de revisão.
+    done: A etapa só fecha quando a entrega estiver registrada, revisada conforme aplicável e vinculada ao ciclo.
+  - step: 14
+    name: Briefing dos 3 infográficos "cena ambiente" (16:9)
+    who: Direção criativa
+    when: Depois da peça-mãe aprovada e antes do controle final.
+    how: Conceito visual e dados a representar em cada infográfico, para handoff à Fase 2.
+    output: Conceito visual e dados a representar em cada infográfico, para handoff à Fase 2.
+    evidence: Artefato da etapa, link de registro e status no controle central.
+    done: A etapa só fecha quando a entrega estiver registrada, revisada conforme aplicável e vinculada ao ciclo.
+  - step: 15
+    name: Sequência de 10–12 stories
+    who: Produtor editorial
+    when: Depois da peça-mãe aprovada e antes do controle final.
+    how: Roteiro da sequência com as "quatro portas" (descoberta, prova, urgência, retenção) e CTA(s).
+    output: Roteiro da sequência com as "quatro portas" (descoberta, prova, urgência, retenção) e CTA(s).
+    evidence: Arquivo versionado da entrega sequência de 10–12 stories e checklist de revisão.
+    done: A etapa só fecha quando a entrega estiver registrada, revisada conforme aplicável e vinculada ao ciclo.
+  - step: 16
+    name: Copy das 3 newsletters do ciclo
+    who: Produtor editorial
+    when: Depois da peça-mãe aprovada e antes do controle final.
+    how: Sequência de e-mails que educa por segmento, antecipa objeções e mostra prova antes do CTA.
+    output: Sequência de e-mails que educa por segmento, antecipa objeções e mostra prova antes do CTA.
+    evidence: Arquivo versionado da entrega copy das 3 newsletters do ciclo e checklist de revisão.
+    done: A etapa só fecha quando a entrega estiver registrada, revisada conforme aplicável e vinculada ao ciclo.
+  - step: 17
+    name: Outline e redação dos 3 ebooks
+    who: Produtor editorial
+    when: Depois da peça-mãe aprovada e antes do controle final.
+    how: Lead magnets ligados ao CTA do Topic Pack, aprofundando um recorte específico do tema.
+    output: Lead magnets ligados ao CTA do Topic Pack, aprofundando um recorte específico do tema.
+    evidence: Arquivo versionado da entrega outline e redação dos 3 ebooks e checklist de revisão.
+    done: A etapa só fecha quando a entrega estiver registrada, revisada conforme aplicável e vinculada ao ciclo.
+  - step: 18
+    name: Mapeamento dos 6 CTAs de ferramenta
+    who: Estrategista editorial
+    when: Depois da peça-mãe aprovada e antes do controle final.
+    how: Definir em quais peças cada um dos 6 CTAs de ferramenta aparece.
+    output: Definir em quais peças cada um dos 6 CTAs de ferramenta aparece.
+    evidence: Artefato da etapa, link de registro e status no controle central.
+    done: A etapa só fecha quando a entrega estiver registrada, revisada conforme aplicável e vinculada ao ciclo.
+  - step: 19
+    name: Checagem de coerência do arco temático
+    who: Estrategista editorial
+    when: No fechamento da produção, antes do handoff.
+    how: 'Cruzar o ciclo atual com os artigos fundadores anteriores do mesmo arco (ex.: sequência de 3 artigos), garantindo continuidade de nomenclatura e CTA.'
+    output: 'Cruzar o ciclo atual com os artigos fundadores anteriores do mesmo arco (ex.: sequência de 3 artigos), garantindo continuidade de nomenclatura e CTA.'
+    evidence: Checklist preenchido, ajustes registrados e aprovação explícita.
+    done: A etapa só fecha quando a entrega estiver registrada, revisada conforme aplicável e vinculada ao ciclo.
+  - step: 20
+    name: Indexação e nomenclatura de todos os arquivos
+    who: Operador de governança
+    when: No fechamento da produção, antes do handoff.
+    how: Aplicar a convenção do Tópico 9.1 a cada asset e organizar nas pastas padrão (Tópico 9.2).
+    output: Aplicar a convenção do Tópico 9.1 a cada asset e organizar nas pastas padrão (Tópico 9.2).
+    evidence: Índice de arquivos, nomes padronizados e estrutura de pastas verificada.
+    done: A etapa só fecha quando a entrega estiver registrada, revisada conforme aplicável e vinculada ao ciclo.
+  - step: 21
+    name: Checklist de conformidade pré-handoff
+    who: Revisor editorial
+    when: No fechamento da produção, antes do handoff.
+    how: Confirmar estilo, GEO, marcação de derivados e nomenclatura antes de liberar para a Fase 2.
+    output: Confirmar estilo, GEO, marcação de derivados e nomenclatura antes de liberar para a Fase 2.
+    evidence: Checklist preenchido, ajustes registrados e aprovação explícita.
+    done: A etapa só fecha quando a entrega estiver registrada, revisada conforme aplicável e vinculada ao ciclo.
+  - step: 22
+    name: Handoff para a Fase 2
+    who: Owner editorial
+    when: Quando o pacote completo atingir 99% PRODUCED.
+    how: Pacote de briefings técnicos por asset visual/vídeo, com specs de formato (proporção, duração, texto na tela).
+    output: Pacote de briefings técnicos por asset visual/vídeo, com specs de formato (proporção, duração, texto na tela).
+    evidence: Pacote de handoff, confirmação de recebimento e status atualizado.
+    done: A etapa só fecha quando a entrega estiver registrada, revisada conforme aplicável e vinculada ao ciclo.
+  entry_gate_four_days:
+  - day: Dia 1
+    objective: Selecionar o ciclo
+    actions: Reunir sinais, documentos, arco temático e backlog.
+    output: Pacote de entrada
+    decision: Avança com contexto mínimo disponível.
+  - day: Dia 2
+    objective: Compreender e planejar
+    actions: Validar tema, lacunas, evidências, CTA e dependências.
+    output: Plano do ciclo
+    decision: Avança com escopo e riscos claros.
+  - day: Dia 3
+    objective: Preparar sprint e iniciar
+    actions: Criar sprint, estruturar outline e iniciar pesquisa ou redação.
+    output: Ciclo em execução
+    decision: Avança sem quebrar WIP.
+  - day: Dia 4
+    objective: Fechar gate anterior
+    actions: Testar entregas, corrigir, retestar e registrar evidências.
+    output: Gate anterior 100% e novo ciclo READY
+    decision: Fecha somente com evidência.
+  exceptions_and_edge_cases:
+  - scenario: Tema sem sinal real
+    action: Retornar ao backlog e selecionar tema com evidência de demanda.
+    status: BLOCKED
+  - scenario: Fonte insuficiente para claim
+    action: Reformular ou remover o claim; não publicar afirmação sem lastro.
+    status: EVIDENCE REQUIRED
+  - scenario: Peça-mãe fora do padrão
+    action: Revisar outline, profundidade, exemplos e tutorial antes dos derivados.
+    status: REWORK
+  - scenario: Derivado não é nativo do canal
+    action: Adaptar formato, gancho, duração, legenda e CTA.
+    status: REWORK
+  - scenario: CTA não corresponde ao Topic Pack
+    action: Bloquear publicação e corrigir o mapeamento.
+    status: BLOCKED
+  - scenario: Arquivo sem nomenclatura ou índice
+    action: Manter em 99% até correção e registro.
+    status: VERIFY REQUIRED
+  - scenario: Aprovação editorial ausente
+    action: Não liberar handoff ou publicação.
+    status: USER ACTION REQUIRED
+  - scenario: Automação falha parcialmente
+    action: Evitar duplicidade, registrar efeitos já produzidos e executar fallback.
+    status: PARTIAL RECOVERY
+  - scenario: Nova ideia durante WIP
+    action: Capturar na fila do próximo ciclo sem interromper o trabalho ativo.
+    status: QUEUED
+  metrics:
+  - metric: Tema com sinal validado
+    target: 100%
+    measurement: Registro da fonte do sinal por ciclo.
+  - metric: Claims relevantes com evidência
+    target: 100%
+    measurement: Checklist de fontes e links.
+  - metric: Peça-mãe dentro da especificação
+    target: 100%
+    measurement: Contagem, outline e checklist editorial.
+  - metric: Derivados produzidos por ciclo
+    target: 100% do pacote aprovado
+    measurement: Índice de assets e arquivos.
+  - metric: Assets com nomenclatura correta
+    target: 100%
+    measurement: Auditoria da estrutura de pastas.
+  - metric: Handoffs aceitos sem devolução crítica
+    target: '>= 90%'
+    measurement: Registro de aceite da Fase 2.
+  - metric: Ciclos fechados em 100% VERIFIED
+    target: '>= 90%'
+    measurement: Controle central e evidências.
+  - metric: Aprendizados aplicados ao ciclo seguinte
+    target: 100% dos ciclos medidos
+    measurement: Roadmap e backlog atualizados.
+  automation_governance:
+  - automation: Pesquisa assistida
+    input: Tema e perguntas de pesquisa
+    mandatory_control: Fontes identificáveis, data e revisão humana
+    verification: Claims conferidos contra fontes
+  - automation: Geração de outline
+    input: Briefing e Topic Pack
+    mandatory_control: Estrutura editorial e critérios de aceitação
+    verification: Editor aprova antes da redação
+  - automation: Derivação de conteúdo
+    input: Peça-mãe aprovada
+    mandatory_control: Adaptação nativa por canal e preservação de sentido
+    verification: Revisão editorial por formato
+  - automation: Nomenclatura e indexação
+    input: Pacote de arquivos
+    mandatory_control: Padrão de nomes e prevenção de duplicatas
+    verification: Índice reconciliado com a pasta
+  - automation: Agendamento e publicação
+    input: Conteúdo aprovado
+    mandatory_control: Canal, data, CTA e versão confirmados
+    verification: Link de publicação registrado
+  acceptance_criteria:
+  - O tema nasce de dor ou demanda registrada.
+  - O Topic Pack possui título, claim central, CTA e ferramenta associada.
+  - A peça-mãe atende profundidade, estilo editorial e requisitos GEO.
+  - Os derivados são adaptados ao formato nativo de cada canal.
+  - Todos os assets estão nomeados, indexados e vinculados ao ciclo.
+  - O checklist de conformidade foi concluído.
+  - O handoff foi aceito pela Fase 2 e possui evidência.
+  - Nenhum item recebe 100% VERIFIED sem comprovação objetiva.
+  reference_matrices:
+    creator_roles:
+    - role: Creator
+      representation: Produz o conteúdo que sustenta toda a operação.
+    - role: ICP
+      representation: O próprio creator é o cliente ideal — vive o problema antes de vendê-lo.
+    - role: Educador
+      representation: Transforma experiência pessoal e técnica em conhecimento transmissível.
+    - role: Distribuidor
+      representation: Possui a audiência e os canais — não depende de mídia de terceiros para alcançar quem importa.
+    - role: Validador
+      representation: Testa problema, linguagem e solução diretamente com a audiência antes de escalar.
+    - role: Product Builder
+      representation: Converte os problemas mapeados em produtos e serviços reais.
+    - role: Vendedor
+      representation: Usa conteúdo, reputação e comunidade — não anúncio frio — para gerar demanda.
+    editorial_guidelines:
+    - guideline: Didático
+      do: Definir termos técnicos na primeira menção; usar analogias simples.
+      avoid: Jargão sem explicação; tom de aula universitária.
+    - guideline: Prático
+      do: Fechar cada bloco com uma ação ou pergunta aplicável.
+      avoid: Teoria sem aplicação; "reflita sobre isso" sem próximo passo.
+    - guideline: Baseado em evidências
+      do: Citar fonte, dado ou estudo por claim relevante.
+      avoid: Afirmações de autoridade sem lastro ("eu sei porque sei").
+    - guideline: Zero coach
+      do: 'Tom de repórter especializado: descreve, investiga, contextualiza.'
+      avoid: Frases de efeito motivacional; promessas de transformação.
+    - guideline: Veia jornalística
+      do: Lide com gancho + dado logo na abertura; hierarquia de informação.
+      avoid: Enrolação antes do ponto principal; clickbait vazio.
+    offer_ecosystem:
+    - layer: Captação gratuita
+      asset: Agente de IA público
+      funnel_role: Primeiro contato + coleta de sinal sobre dores reais.
+    - layer: Captação gratuita
+      asset: Blog com ferramentas (calculadoras, scanners, quizzes)
+      funnel_role: Diagnóstico rápido; CTA natural de cada Topic Pack.
+    - layer: Produto digital recorrente
+      asset: APP SaaS
+      funnel_role: Retenção e monetização contínua do problema já validado.
+    - layer: Infoproduto
+      asset: Ebooks e cursos
+      funnel_role: Aprofundamento pago de temas validados em conteúdo gratuito.
+    - layer: Serviço de alto contato
+      asset: Consultoria
+      funnel_role: Casos complexos que a ferramenta e o infoproduto não resolvem sozinhos.
+    - layer: Produto físico
+      asset: A definir no roadmap
+      funnel_role: Extensão tangível de um conceito já validado em conteúdo e produto digital.
+    asset_package_per_cycle:
+    - asset: Artigo mãe (blog)
+      quantity_per_cycle: '1'
+      specification: 1.800–2.400 palavras · estrutura de 9–11 blocos (ver 5.2)
+    - asset: Vídeo mãe
+      quantity_per_cycle: '1'
+      specification: 8–12 minutos
+    - asset: Infográfico "cena ambiente"
+      quantity_per_cycle: '3'
+      specification: '16:9'
+    - asset: Imagens estáticas
+      quantity_per_cycle: '6'
+      specification: Feed / apoio a posts
+    - asset: Carrosséis
+      quantity_per_cycle: '6'
+      specification: Instagram / LinkedIn
+    - asset: Vídeos verticais
+      quantity_per_cycle: '4'
+      specification: Cortes do vídeo mãe — Reels/TikTok/Shorts
+    - asset: Stories
+      quantity_per_cycle: 10–12
+      specification: Sequência com CTA(s)
+    - asset: CTAs de ferramenta
+      quantity_per_cycle: '6'
+      specification: Distribuídos entre artigo, vídeo e derivados
+    - asset: Newsletters
+      quantity_per_cycle: '3'
+      specification: Sequência ligada ao Topic Pack do ciclo
+    - asset: Ebooks
+      quantity_per_cycle: '3'
+      specification: Aprofundamento / lead magnet
+    distribution_matrix:
+    - channel: Blog
+      main_format: Artigo mãe
+      funnel_function: Awareness + GEO
+      technique_2026: 'Estruturar para citabilidade: dados, fontes, hierarquia clara de títulos, respostas diretas logo após perguntas.'
+    - channel: Instagram (feed)
+      main_format: Carrossel / imagem
+      funnel_function: Consideração
+      technique_2026: Autenticidade pesa mais que estética de alcance; evitar padrão "genérico de feed".
+    - channel: Reels
+      main_format: Vídeo vertical curto
+      funnel_function: Descoberta
+      technique_2026: Formato dominante de vídeo curto; gancho nos 2 primeiros segundos.
+    - channel: TikTok
+      main_format: Vídeo vertical curto
+      funnel_function: Descoberta
+      technique_2026: Nativo obrigatório — conteúdo republicado sem adaptação perde relevância.
+    - channel: YouTube Shorts
+      main_format: Vídeo vertical curto
+      funnel_function: Descoberta + SEO de vídeo
+      technique_2026: Usar como porta de entrada para o vídeo mãe (link/comentário fixado).
+    - channel: YouTube (longo)
+      main_format: Vídeo mãe (8–12 min)
+      funnel_function: Consideração + autoridade
+      technique_2026: Vídeo segue como formato de maior retenção de atenção; investir em tutorial real, não só opinião.
+    - channel: LinkedIn
+      main_format: Texto longo, documento ou vídeo nativo
+      funnel_function: Autoridade B2B
+      technique_2026: Vídeo nativo recebe engajamento muito maior que post estático; algoritmo pondera tempo de leitura, não só reação; evitar link externo no corpo do post (colocar nos comentários).
+    - channel: Stories
+      main_format: Sequência 10–12 peças
+      funnel_function: Ativação + prova social
+      technique_2026: 'Manter "quatro portas" abertas em cada sequência: descoberta, prova, urgência e retenção.'
+    - channel: Email / Newsletter
+      main_format: 3 e-mails por ciclo
+      funnel_function: Aprofundamento + venda
+      technique_2026: Newsletter é canal de venda, não só aviso; manter nicho claro e cadência regular para sustentar taxa de abertura.
+    value_chain_phases:
+    - phase: Fase 1 — Produção
+      description: Esta entrega. Planejamento estratégico-tático-operacional e produção de todo o conteúdo (texto e roteiros) do ciclo.
+      dependency: Tarefas 01–22 (abaixo)
+    - phase: Fase 2 — Geração de imagens e vídeos
+      description: Transformação dos roteiros e briefings da Fase 1 em assets visuais finalizados (imagens, infográficos, cortes de vídeo).
+      dependency: Depende do handoff da Tarefa 22
+    - phase: Fase 3 — Revisão
+      description: Checagem editorial, de marca e de conformidade de todos os assets antes do agendamento.
+      dependency: Depende da Fase 2
+    - phase: Fase 4 — Agendamento e publicação
+      description: Distribuição nos canais conforme a Matriz do Tópico 6, respeitando a cadência de cada plataforma.
+      dependency: Depende da Fase 3
+    - phase: Fase 5 — Análise e desempenho
+      description: Leitura de métricas por canal e por etapa de funil, retroalimentando o próximo ciclo (etapa "Feedback" do Tópico 2.2).
+      dependency: Depende da Fase 4
+  related_documents:
+  - PD-CLB-20260906-F01-DOC-V01 process doc padrão multiplataforma.
+  - Roadmap editorial - A DEFINIR.
+  - Template de Topic Pack - A DEFINIR.
+  - Checklist de conformidade editorial - A DEFINIR.
+  - Runbook da Fase 2 - A DEFINIR.
+  - Dashboard de analytics - A DEFINIR.
