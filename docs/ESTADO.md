@@ -24,7 +24,7 @@ A documentação oficial do GitHub orienta configurar auto-add em **Project → 
 
 ## Estrutura operacional definida
 - Schema de Epic → Issue → Sub-issue → checklist: `docs/SCHEMA-TRABALHO.md`.
-- Runbook editorial: `Runbooks/RUN-F1-PRODUCAO-EDITORIAL-MULTIPLATAFORMA.md`.
+- Runbook editorial: `Runbooks/RUN-F1-PRODUCAO-EDITORIAL-MULTIPLATAFORMA.yaml`.
 - Epic criado: #2 — `F1-3X`.
 - Issues de ciclo: #3, #4 e #5.
 - Subissue documental/operacional: #6, parent textual #3. A integração não expõe vínculo nativo; não declarar vínculo nativo aplicado.
