@@ -6,8 +6,15 @@ Operação do GTM-Blog em duas plataformas: **Notion como banco de informações
 - [CLAUDE.md](CLAUDE.md) e [INSTRUCOES.md](INSTRUCOES.md) — protocolo.
 - [Notion ↔ GitHub](docs/NOTION-ROTA.md) — páginas e fluxo.
 - [Modelo operacional](docs/MODELO-OPERACIONAL.md), [schema de trabalho](docs/SCHEMA-TRABALHO.md), [fontes](docs/FONTES.md) e [estado](docs/ESTADO.md).
+- [Árvore real](docs/ARVORE-REPOSITORIO.md) e [árvore-alvo](docs/ARVORE-PROJETO-ALVO.txt).
+- [Knowledge base local do GTM-Blog](projects/GTM-Blog/knowledge/README.md).
 - [Runbooks](Runbooks/README.md) — execução operacional repetível.
 - [Prompt de configuração](prompts/01-bootstrap-copiloto-ops.md), [orientação de agentes](prompts/02-agentes.md) e [modelo de tarefa](templates/tarefa.md).
+
+## Execução única de 2026-09-27
+A preparação para submissão do hardcode está concentrada na **subissue #6 — Ingestão local, árvore e preparação do hardcode**, com parent operacional #3. Até o fechamento de #6, ela é o único ponto de controle para essa carga: inventário → validação de segredos → enquadramento na árvore-alvo → escrita em `main` → validação → evidências.
+
+A documentação local já está versionada em `projects/GTM-Blog/knowledge/`. A árvore real não deve ser confundida com a arquitetura-alvo: diretórios planejados só passam a existir quando houver artefato concreto para versionar.
 
 ## Rota única
 1. Entrar no [GTM-Blog — Launch Control](https://app.notion.com/p/3e7d1d673fb381899d77e41b766525ac), ler [00 — Agent Runner](https://app.notion.com/p/3e7d1d673fb3814bbe40d200227da25c) e consultar [01 — Master Index](https://app.notion.com/p/3e7d1d673fb381109e31eee5060e1b62).
