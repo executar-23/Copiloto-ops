@@ -1,5 +1,7 @@
 # Patches pendentes
-`executar-blog-copiloto-conector-remoto.patch` contém a mudança de código do Copiloto Operacional em `Sas-Executar/executar-Blog`: conector MCP remoto no Worker, `OPS_REPO` apontando para este repositório e a rota Notion/Gmail na skill. Esta sessão não tem push naquele repositório, por isso o patch está aqui.
+`executar-blog-copiloto-conector-remoto.patch` contém 2 commits para `Sas-Executar/executar-Blog`: (1) conector MCP remoto no Worker, `OPS_REPO` apontando para este repositório e a rota Notion/Gmail na skill; (2) o novo status report "processo" (DOC-0066) com placeholders.
+
+`exemplo-status-processo.html` é um render do novo status report com dados simulados (campanha WF-CAMP-001, instância RC-F01), só para conferência visual. Esta sessão não tem push naquele repositório, por isso o patch está aqui.
 
 Para aplicar (em um clone de `Sas-Executar/executar-Blog` com permissão de escrita):
 ```
