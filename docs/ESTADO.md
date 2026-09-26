@@ -11,6 +11,8 @@ Decisão do usuário: **GitHub executar-23/Copiloto-ops** para operação; **Not
 - A documentação local AIKB fornecida em 2026-09-26 foi versionada em `projects/GTM-Blog/knowledge/`.
 - A árvore real está em `docs/ARVORE-REPOSITORIO.md`; a arquitetura-alvo está em `docs/ARVORE-PROJETO-ALVO.txt`.
 - A subissue operacional #6 foi criada com `Parent: #3` para concentrar a preparação e a submissão do hardcode de 2026-09-27.
+- O scaffold creator-led foi materializado diretamente na raiz do `executar-23/Copiloto-ops`: 143 caminhos `.gitkeep`, commit `48653d8a13374bb9f9efec9323d9193b0bbeeabc`, validação 143/143.
+- `SETUP-001` está concluído na Issue #7; o repositório separado `executar-23/creator-led-platform` não existe e não deve ser usado como destino.
 
 ## Política de commits
 ADR de agentes em main aceito em 2026-09-26. A regra operacional está em AGENTS.md e é repetida nos pontos de entrada necessários; o racional está em `docs/ADR-0001-AGENTES-DIRETO-MAIN.md`. O README apenas aponta para essas fontes. WIP=1 por agente, não exclusividade global. Locking/ownership de arquivos segue pendente; não presumir CI configurada.
@@ -37,7 +39,7 @@ A documentação oficial do GitHub orienta configurar auto-add em **Project → 
 - Estado efetivo do workflow/auto-add do Project #1.
 - Campos/vínculos internos do Project #1.
 - Cadência final do F1-3X: 15 dias/ciclo no Process Document versus 17 dias/pack na ficha da iniciativa.
-- Fonte Notion específica e owner/gate da subissue #6.
+- Gate da subissue #6 permanece `gate:tbd`; fonte Notion e owner já estão registrados.
 
 ## Próxima ação única
-Em **2026-09-27**, executar #6: inventariar todo hardcode local disponível, validar segredos/credenciais, mapear cada artefato para a árvore-alvo, versionar somente artefatos concretos em `main`, validar o resultado e registrar evidências. Após #6, retomar o Topic Pack do Ciclo 1 (#3).
+Continuar #6 em **2026-09-27** apenas para hardcode/artefatos concretos ainda não versionados; o scaffold estrutural já foi concluído em #7. Depois, retomar o Topic Pack do Ciclo 1 (#3).
