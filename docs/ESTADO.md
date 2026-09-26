@@ -10,7 +10,7 @@ Decisão do usuário: **GitHub executar-23/Copiloto-ops** para operação; **Not
 - O usuário forneceu a URL `https://github.com/users/executar-23/projects/1` e a URL de workflow `https://github.com/users/executar-23/projects/1/workflows/21a1dc6e-8b27-46e0-893d-178005569616`.
 
 ## Política de commits
-ADR de agentes em main aceito em 2026-09-26 e incorporado ao README/AGENTS/INSTRUCOES/CLAUDE e prompts. WIP=1 por agente, não exclusividade global. Locking/ownership de arquivos segue pendente; não presumir CI configurada.
+ADR de agentes em main aceito em 2026-09-26. A regra operacional está em AGENTS.md e é repetida nos pontos de entrada necessários; o racional está em `docs/ADR-0001-AGENTES-DIRETO-MAIN.md`. O README apenas aponta para essas fontes. WIP=1 por agente, não exclusividade global. Locking/ownership de arquivos segue pendente; não presumir CI configurada.
 
 Antes de escrever: sincronizar, inspecionar arquivos-alvo e HEAD remoto. Escrita deve ser fast-forward; conflito ou avanço concorrente exige interromper e reinspecionar.
 
