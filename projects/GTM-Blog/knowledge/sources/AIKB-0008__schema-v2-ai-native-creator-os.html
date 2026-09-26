@@ -1,0 +1,999 @@
+<html>
+<head>
+<meta charset="UTF-8">
+</head>
+<body>
+
+<p class="p1">Sim. O correto é gerar uma V2, mas sem simplesmente acrescentar colunas ao CSV. O V1 deve ser preservado como camada de compatibilidade; a V2 deve corrigir o modelo conceitual para servir como kernel executável do </span><code>AI-native Creator Business Operating System</code><span class="s1">.</p>
+<p class="p1">O V1 descreve muito bem “uma tarefa rastreável”. O que ele ainda não descreve adequadamente é “uma execução agentiva”.</p>
+<p class="p1">Hoje, sistemas agentivos precisam representar explicitamente agente, ferramentas, handoffs, estado retomável, guardrails/aprovações, outputs tipados e tracing. Structured Outputs também permite transformar schemas de saída em contratos efetivamente validados, e não apenas instruções textuais.<span class="Apple-converted-space"> </span></p>
+<h3><span class="s1"><b>Diagnóstico do V1</b></span></h3>
+<p class="p3">Eu manteria aproximadamente 70–80% da semântica existente, mas corrigiria estes pontos:</p>
+
+
+<table border="1" cellspacing="0" cellpadding="8" width="100%" style="width: 100%; border-collapse: collapse; border: 1px solid;"><thead><tr><th style="border: 1px solid; padding: 8px 12px; white-space: nowrap;">
+<p class="p1"><b>V1</b></p>
+</th><th style="border: 1px solid; padding: 8px 12px; white-space: nowrap;">
+<p class="p1"><b>Problema</b></p>
+</th><th style="border: 1px solid; padding: 8px 12px; white-space: nowrap;">
+<p class="p1"><b>V2</b></p>
+</th></tr></thead><tbody><tr><td style="border: 1px solid; padding: 8px 12px; white-space: nowrap;">
+<p class="p1">CSV é quase a entidade central</p>
+</td><td style="border: 1px solid; padding: 8px 12px; white-space: nowrap;">
+<p class="p1">formato tabular começa a determinar arquitetura</p>
+</td><td style="border: 1px solid; padding: 8px 12px; white-space: nowrap;">
+<p class="p1">objeto canônico → CSV vira projeção</p>
+</td></tr><tr><td style="border: 1px solid; padding: 8px 12px; white-space: nowrap;">
+<p class="p1"><code>prompt_ia_self_contained</code><span class="s2"> armazenado na tarefa</span></p>
+</td><td style="border: 1px solid; padding: 8px 12px; white-space: nowrap;">
+<p class="p1">duplicação e drift</p>
+</td><td style="border: 1px solid; padding: 8px 12px; white-space: nowrap;">
+<p class="p1">prompt compilado no momento da execução</p>
+</td></tr><tr><td style="border: 1px solid; padding: 8px 12px; white-space: nowrap;">
+<p class="p1"><code>dependencia_bloqueante</code><span class="s2"> = 0..1</span></p>
+</td><td style="border: 1px solid; padding: 8px 12px; white-space: nowrap;">
+<p class="p1">workflows reais têm DAG</p>
+</td><td style="border: 1px solid; padding: 8px 12px; white-space: nowrap;">
+<p class="p1"><code>depends_on[]</code></p>
+</td></tr><tr><td style="border: 1px solid; padding: 8px 12px; white-space: nowrap;">
+<p class="p1">um único </span><code>status</code></p>
+</td><td style="border: 1px solid; padding: 8px 12px; white-space: nowrap;">
+<p class="p1">mistura readiness, execução e verificação</p>
+</td><td style="border: 1px solid; padding: 8px 12px; white-space: nowrap;">
+<p class="p1">estados ortogonais</p>
+</td></tr><tr><td style="border: 1px solid; padding: 8px 12px; white-space: nowrap;">
+<p class="p1"><code>TBD</code><span class="s2"> em campos obrigatórios</span></p>
+</td><td style="border: 1px solid; padding: 8px 12px; white-space: nowrap;">
+<p class="p1">válido estruturalmente ≠ pronto para executar</p>
+</td><td style="border: 1px solid; padding: 8px 12px; white-space: nowrap;">
+<p class="p1">separar </span><code>schema_valid</code><span class="s1"> de </span><code>execution_ready</code></p>
+</td></tr><tr><td style="border: 1px solid; padding: 8px 12px; white-space: nowrap;">
+<p class="p1">SMART dividido em cinco colunas</p>
+</td><td style="border: 1px solid; padding: 8px 12px; white-space: nowrap;">
+<p class="p1">parte é metadado de planejamento</p>
+</td><td style="border: 1px solid; padding: 8px 12px; white-space: nowrap;">
+<p class="p1">escopo + aceite + capacidade + prazo</p>
+</td></tr><tr><td style="border: 1px solid; padding: 8px 12px; white-space: nowrap;">
+<p class="p1">máximo de três passos</p>
+</td><td style="border: 1px solid; padding: 8px 12px; white-space: nowrap;">
+<p class="p1">regra arbitrária</p>
+</td><td style="border: 1px solid; padding: 8px 12px; white-space: nowrap;">
+<p class="p1">ações N, com heurística de decomposição</p>
+</td></tr><tr><td style="border: 1px solid; padding: 8px 12px; white-space: nowrap;">
+<p class="p1"><code>fonte_id</code><span class="s2"> singular</span></p>
+</td><td style="border: 1px solid; padding: 8px 12px; white-space: nowrap;">
+<p class="p1">tarefa pode derivar de várias evidências</p>
+</td><td style="border: 1px solid; padding: 8px 12px; white-space: nowrap;">
+<p class="p1"><code>source_refs[]</code></p>
+</td></tr><tr><td style="border: 1px solid; padding: 8px 12px; white-space: nowrap;">
+<p class="p1">prazo </span><code>DD/MM/AAAA</code></p>
+</td><td style="border: 1px solid; padding: 8px 12px; white-space: nowrap;">
+<p class="p1">ruim para interoperabilidade</p>
+</td><td style="border: 1px solid; padding: 8px 12px; white-space: nowrap;">
+<p class="p1">ISO-8601</p>
+</td></tr><tr><td style="border: 1px solid; padding: 8px 12px; white-space: nowrap;">
+<p class="p1">tempo livre </span><code>&quot;45 minutos&quot;</code></p>
+</td><td style="border: 1px solid; padding: 8px 12px; white-space: nowrap;">
+<p class="p1">ruim para computação</p>
+</td><td style="border: 1px solid; padding: 8px 12px; white-space: nowrap;">
+<p class="p1">minutos ou ISO duration</p>
+</td></tr><tr><td style="border: 1px solid; padding: 8px 12px; white-space: nowrap;">
+<p class="p1">evidência como string</p>
+</td><td style="border: 1px solid; padding: 8px 12px; white-space: nowrap;">
+<p class="p1">não é verificável automaticamente</p>
+</td><td style="border: 1px solid; padding: 8px 12px; white-space: nowrap;">
+<p class="p1">entidade </span><code>evidence</code></p>
+</td></tr><tr><td style="border: 1px solid; padding: 8px 12px; white-space: nowrap;">
+<p class="p1">output livre</p>
+</td><td style="border: 1px solid; padding: 8px 12px; white-space: nowrap;">
+<p class="p1">difícil encadear agentes</p>
+</td><td style="border: 1px solid; padding: 8px 12px; white-space: nowrap;">
+<p class="p1"><code>output_contract</code><span class="s2"> tipado</span></p>
+</td></tr><tr><td style="border: 1px solid; padding: 8px 12px; white-space: nowrap;">
+<p class="p1">executor/responsável simples</p>
+</td><td style="border: 1px solid; padding: 8px 12px; white-space: nowrap;">
+<p class="p1">insuficiente para agentes</p>
+</td><td style="border: 1px solid; padding: 8px 12px; white-space: nowrap;">
+<p class="p1">actor + agent_profile + runtime</p>
+</td></tr><tr><td style="border: 1px solid; padding: 8px 12px; white-space: nowrap;">
+<p class="p1">sem ferramenta/permissão</p>
+</td><td style="border: 1px solid; padding: 8px 12px; white-space: nowrap;">
+<p class="p1">agente não sabe o que pode executar</p>
+</td><td style="border: 1px solid; padding: 8px 12px; white-space: nowrap;">
+<p class="p1">tool policy</p>
+</td></tr><tr><td style="border: 1px solid; padding: 8px 12px; white-space: nowrap;">
+<p class="p1">sem aprovação</p>
+</td><td style="border: 1px solid; padding: 8px 12px; white-space: nowrap;">
+<p class="p1">risco em efeitos externos</p>
+</td><td style="border: 1px solid; padding: 8px 12px; white-space: nowrap;">
+<p class="p1">approval gates</p>
+</td></tr><tr><td style="border: 1px solid; padding: 8px 12px; white-space: nowrap;">
+<p class="p1">sem idempotência</p>
+</td><td style="border: 1px solid; padding: 8px 12px; white-space: nowrap;">
+<p class="p1">retry pode repetir uma ação</p>
+</td><td style="border: 1px solid; padding: 8px 12px; white-space: nowrap;">
+<p class="p1"><code>idempotency_key</code></p>
+</td></tr><tr><td style="border: 1px solid; padding: 8px 12px; white-space: nowrap;">
+<p class="p1">sem run/attempt</p>
+</td><td style="border: 1px solid; padding: 8px 12px; white-space: nowrap;">
+<p class="p1">tarefa e execução ficam confundidas</p>
+</td><td style="border: 1px solid; padding: 8px 12px; white-space: nowrap;">
+<p class="p1"><code>RUN-*</code><span class="s2"> separado</span></p>
+</td></tr><tr><td style="border: 1px solid; padding: 8px 12px; white-space: nowrap;">
+<p class="p1">sem tracing</p>
+</td><td style="border: 1px solid; padding: 8px 12px; white-space: nowrap;">
+<p class="p1">baixa auditabilidade</p>
+</td><td style="border: 1px solid; padding: 8px 12px; white-space: nowrap;">
+<p class="p1">trace/event log</p>
+</td></tr><tr><td style="border: 1px solid; padding: 8px 12px; white-space: nowrap;">
+<p class="p1">sem avaliação formal</p>
+</td><td style="border: 1px solid; padding: 8px 12px; white-space: nowrap;">
+<p class="p1">“aceite” depende de interpretação</p>
+</td><td style="border: 1px solid; padding: 8px 12px; white-space: nowrap;">
+<p class="p1">eval contracts</p>
+</td></tr></tbody></table>
+
+
+<p class="p1">O ponto sobre aprovação é particularmente importante: a arquitetura atual de agentes diferencia guardrails automáticos de human review e permite pausar uma execução antes de operações com efeitos externos e depois retomar o mesmo estado.<span class="Apple-converted-space"> </span></p>
+<h2><span class="s1"><b>Schema canônico V2</b></span></h2>
+<p class="p3">Eu formalizaria o núcleo desta maneira:</p>
+
+
+<pre><code class="language-yaml"># ============================================================
+# EXECUTION CONTRACT V2
+# AI-NATIVE EXECUTION KERNEL
+# ============================================================
+
+schema:
+  metadata:
+    id: EXECUTION-CONTRACT-SCHEMA-002
+    version: &quot;2.0.0&quot;
+    supersedes: EXECUTION-CONTRACT-SCHEMA-001
+    status: PROPOSED_CANONICAL
+    language: pt-BR
+
+    purpose: &gt;
+      Representar planejamento, orquestração, execução, verificação,
+      rastreabilidade e retomada de trabalho executado por humanos,
+      agentes de IA, automações e ferramentas.
+
+    compatibility:
+      v1_portable_csv: PRESERVED_AS_VIEW
+      v1_internal_csv: PRESERVED_AS_VIEW
+      breaking_semantic_change: true
+
+# ============================================================
+# 00. PRINCÍPIOS
+# ============================================================
+
+  principles:
+    canonical_object_not_csv: true
+    stable_ids: true
+    immutable_execution_history: true
+    explicit_dependencies: true
+    explicit_permissions: true
+    typed_inputs_outputs: true
+    evidence_before_verified: true
+    structured_outputs_first: true
+    prompt_compilation: true
+    resumable_execution: true
+    idempotent_side_effects: true
+    least_privilege: true
+    provenance_required: true
+    never_invent_missing_information: true
+
+# ============================================================
+# 01. ENTIDADES
+# ============================================================
+
+  entities:
+
+    workflow:
+      primary_key: workflow_id
+
+      fields:
+        workflow_id:
+          type: string
+          pattern: &quot;^WF-[A-Z0-9-]+$&quot;
+
+        version:
+          type: semver
+          required: true
+
+        title:
+          type: string
+          required: true
+
+        objective:
+          type: string
+          required: true
+
+        entry_conditions:
+          type: array
+
+        exit_conditions:
+          type: array
+
+        nodes:
+          type: array
+          items:
+            ref: workflow_node
+
+        status:
+          enum:
+            - DRAFT
+            - ACTIVE
+            - DEPRECATED
+            - RETIRED
+
+
+    workflow_node:
+      primary_key: node_id
+
+      fields:
+        node_id:
+          type: string
+
+        node_type:
+          enum:
+            - TASK
+            - ROUTER
+            - PARALLEL
+            - JOIN
+            - EVALUATION
+            - APPROVAL
+            - HUMAN_ACTION
+            - TOOL_ACTION
+            - HANDOFF
+            - TERMINAL
+
+        agent_profile_ref:
+          type: reference
+          required: conditional
+
+        task_template_ref:
+          type: reference
+          required: conditional
+
+        depends_on:
+          type: array
+
+        transition_rules:
+          type: array
+
+        on_success:
+          type: array
+
+        on_failure:
+          type: array
+
+        on_blocked:
+          type: array
+
+
+    work_item:
+      primary_key: work_item_id
+
+      description: &gt;
+        Unidade de demanda que percorre um workflow.
+
+      fields:
+
+        work_item_id:
+          type: string
+          pattern: &quot;^WI-[0-9]{6,}$&quot;
+
+        workflow_ref:
+          type: versioned_reference
+          required: true
+
+        title:
+          type: string
+          required: true
+
+        objective:
+          type: string
+          required: true
+
+        source_refs:
+          type: array
+          items:
+            ref: source_reference
+
+        current_node:
+          type: reference
+
+        priority:
+          enum:
+            - P0
+            - P1
+            - P2
+            - P3
+
+        owner:
+          type: actor_reference
+          fallback: A_DEFINIR
+
+        created_at:
+          type: datetime
+          format: ISO8601
+
+        due_at:
+          type: datetime_or_null
+          format: ISO8601
+
+        state:
+          ref: state_vector
+
+
+    task:
+      primary_key: task_id
+
+      fields:
+
+        task_id:
+          type: string
+          pattern: &quot;^TSK-[0-9]{6,}$&quot;
+
+        work_item_ref:
+          type: reference
+          required: true
+
+        workflow_node_ref:
+          type: reference
+          required: true
+
+        title:
+          type: string
+          required: true
+
+        action:
+          type: string
+          required: true
+
+        objective:
+          type: string
+          required: true
+
+        scope:
+          type: object
+
+          fields:
+
+            included:
+              type: array
+
+            excluded:
+              type: array
+
+        inputs:
+          type: array
+          items:
+            ref: resource_reference
+
+        dependencies:
+          type: array
+
+          items:
+            fields:
+
+              task_ref:
+                type: reference
+
+              relation:
+                enum:
+                  - FINISH_TO_START
+                  - START_TO_START
+                  - INFORMATIONAL
+
+              blocking:
+                type: boolean
+
+              satisfaction_condition:
+                type: string
+
+        actions:
+          type: array
+          min_items: 1
+
+          items:
+            fields:
+              action_id:
+                type: string
+
+              instruction:
+                type: string
+
+              expected_result:
+                type: string
+
+        output_contract:
+          ref: output_contract
+
+        acceptance:
+          type: array
+          items:
+            ref: acceptance_criterion
+
+        evals:
+          type: array
+          items:
+            ref: eval_spec
+
+        execution_policy:
+          ref: execution_policy
+
+        agent_profile_ref:
+          type: versioned_reference
+
+        context_pack_ref:
+          type: versioned_reference
+
+        tool_policy_ref:
+          type: versioned_reference
+
+        automation_level:
+          enum:
+            - A0
+            - A1
+            - A2
+            - A3
+            - A4
+
+        estimated_effort:
+          fields:
+
+            duration_minutes:
+              type: integer
+
+            uncertainty:
+              enum:
+                - LOW
+                - MEDIUM
+                - HIGH
+
+        source_refs:
+          type: array
+
+        state:
+          ref: state_vector
+
+# ============================================================
+# 02. ESTADOS ORTOGONAIS
+# ============================================================
+
+    state_vector:
+
+      fields:
+
+        readiness:
+          enum:
+            - NOT_READY
+            - READY
+
+        execution:
+          enum:
+            - NOT_STARTED
+            - CLAIMED
+            - RUNNING
+            - PAUSED
+            - BLOCKED
+            - SUCCEEDED
+            - FAILED
+            - CANCELLED
+
+        approval:
+          enum:
+            - NOT_REQUIRED
+            - PENDING
+            - APPROVED
+            - REJECTED
+
+        delivery:
+          enum:
+            - NOT_APPLICABLE
+            - PREPARED
+            - SUBMITTED
+            - RELEASED
+
+        verification:
+          enum:
+            - NOT_VERIFIED
+            - VERIFYING
+            - VERIFIED
+            - REJECTED
+
+      derived_status:
+        rule: &gt;
+          Nunca persistir um único status ambíguo como fonte de verdade.
+          Interfaces podem calcular um label resumido a partir
+          deste vetor.
+
+# ============================================================
+# 03. RECURSOS E CONTEXTO
+# ============================================================
+
+    resource_reference:
+
+      fields:
+
+        resource_id:
+          type: string
+
+        resource_type:
+          enum:
+            - FILE
+            - DOCUMENT
+            - URL
+            - REPOSITORY
+            - DATABASE_RECORD
+            - DATASET
+            - API_RESOURCE
+            - ARTIFACT
+            - EVIDENCE
+            - SECRET_REFERENCE
+
+        locator:
+          type: string
+
+        version:
+          type: string_or_null
+
+        content_hash:
+          type: string_or_null
+
+        required:
+          type: boolean
+
+        access:
+          enum:
+            - READ
+            - WRITE
+            - READ_WRITE
+
+        availability:
+          enum:
+            - AVAILABLE
+            - MISSING
+            - ACCESS_DENIED
+            - UNKNOWN
+
+
+    context_pack:
+
+      primary_key: context_pack_id
+
+      fields:
+
+        context_pack_id:
+          type: string
+          pattern: &quot;^CTX-[0-9]{6,}$&quot;
+
+        version:
+          type: semver
+
+        objective_context:
+          type: string
+
+        facts:
+          type: array
+
+        decisions:
+          type: array
+
+        constraints:
+          type: array
+
+        terminology:
+          type: array
+
+        resource_refs:
+          type: array
+
+        unresolved_gaps:
+          type: array
+
+        generated_at:
+          type: datetime
+
+        content_hash:
+          type: string
+
+# ============================================================
+# 04. PERFIL DO AGENTE
+# ============================================================
+
+    agent_profile:
+
+      primary_key: agent_profile_id
+
+      fields:
+
+        agent_profile_id:
+          type: string
+          pattern: &quot;^AGT-[A-Z0-9-]+$&quot;
+
+        version:
+          type: semver
+
+        role:
+          type: string
+
+        mission:
+          type: string
+
+        responsibilities:
+          type: array
+
+        prohibited_actions:
+          type: array
+
+        competencies:
+          type: array
+
+        handoff_description:
+          type: string
+
+        model_policy_ref:
+          type: reference
+
+        tool_policy_ref:
+          type: reference
+
+        output_schema_ref:
+          type: reference
+
+        guardrails:
+          type: array
+
+        handoff_targets:
+          type: array
+
+# ============================================================
+# 05. FERRAMENTAS E PERMISSÕES
+# ============================================================
+
+    tool_policy:
+
+      primary_key: tool_policy_id
+
+      fields:
+
+        tool_policy_id:
+          type: string
+
+        version:
+          type: semver
+
+        allowed_tools:
+          type: array
+
+        denied_tools:
+          type: array
+
+        default_permission:
+          enum:
+            - DENY
+            - READ_ONLY
+
+        side_effect_policy:
+
+          read_only:
+            approval_required: false
+
+          reversible_write:
+            approval_required: conditional
+
+          external_communication:
+            approval_required: true
+
+          irreversible_write:
+            approval_required: true
+
+          financial_action:
+            approval_required: true
+
+        secrets:
+          rule: &gt;
+            Referenciar segredo por identificador seguro.
+            Nunca incorporar credencial diretamente em prompt,
+            task ou trace.
+
+# ============================================================
+# 06. OUTPUT
+# ============================================================
+
+    output_contract:
+
+      fields:
+
+        artifact_type:
+          enum:
+            - DOCUMENT
+            - DATASET
+            - CODE
+            - IMAGE
+            - REPORT
+            - DECISION
+            - SYSTEM_CHANGE
+            - MESSAGE
+            - JSON
+            - CSV
+            - HTML
+            - OTHER
+
+        media_type:
+          type: string
+
+        schema_ref:
+          type: reference_or_null
+
+        destination:
+          type: resource_reference_or_null
+
+        naming_rule:
+          type: string_or_null
+
+        structured_output_required:
+          type: boolean
+
+        required_fields:
+          type: array
+
+# ============================================================
+# 07. ACEITE E EVALUATION
+# ============================================================
+
+    acceptance_criterion:
+
+      fields:
+
+        criterion_id:
+          type: string
+
+        statement:
+          type: string
+
+        verification_method:
+          enum:
+            - DETERMINISTIC
+            - SCHEMA_VALIDATION
+            - TEST
+            - QUERY
+            - HUMAN_REVIEW
+            - MODEL_GRADER
+
+        severity:
+          enum:
+            - BLOCKING
+            - ADVISORY
+
+        expected:
+          type: any
+
+
+    eval_spec:
+
+      fields:
+
+        eval_id:
+          type: string
+
+        dimension:
+          type: string
+
+        method:
+          enum:
+            - ASSERTION
+            - SCHEMA
+            - TEST
+            - RULE
+            - MODEL_GRADER
+            - HUMAN
+
+        blocking:
+          type: boolean
+
+        threshold:
+          type: number_or_null
+
+        evidence_required:
+          type: boolean
+
+        evaluator_ref:
+          type: reference_or_null
+
+# ============================================================
+# 08. EXECUTION POLICY
+# ============================================================
+
+    execution_policy:
+
+      fields:
+
+        max_attempts:
+          type: integer
+          default: 3
+
+        retry_on:
+          type: array
+
+        timeout_seconds:
+          type: integer_or_null
+
+        idempotency_required:
+          type: boolean
+
+        idempotency_key_strategy:
+          type: string_or_null
+
+        concurrency:
+          fields:
+
+            wip_limit:
+              type: integer
+              default: 1
+
+            exclusive_lock:
+              type: boolean
+
+        failure_policy:
+          enum:
+            - STOP
+            - RETRY
+            - HANDOFF
+            - HUMAN_REVIEW
+            - COMPENSATE
+
+        compensation_action_ref:
+          type: reference_or_null
+
+# ============================================================
+# 09. EXECUTION RUN
+# ============================================================
+
+    execution_run:
+
+      primary_key: run_id
+
+      fields:
+
+        run_id:
+          type: string
+          pattern: &quot;^RUN-[0-9]{8,}$&quot;
+
+        task_ref:
+          type: reference
+          required: true
+
+        attempt:
+          type: integer
+
+        actor:
+          type: actor_reference
+
+        agent_profile_ref:
+          type: versioned_reference_or_null
+
+        model:
+          fields:
+
+            provider:
+              type: string
+
+            model_id:
+              type: string
+
+            settings_hash:
+              type: string
+
+        started_at:
+          type: datetime
+
+        ended_at:
+          type: datetime_or_null
+
+        context_snapshot_ref:
+          type: reference
+
+        instruction_snapshot_ref:
+          type: reference
+
+        tool_calls:
+          type: array
+
+        handoffs:
+          type: array
+
+        interruptions:
+          type: array
+
+        output_refs:
+          type: array
+
+        evidence_refs:
+          type: array
+
+        eval_result_refs:
+          type: array
+
+        trace_ref:
+          type: string_or_null
+
+        usage:
+          fields:
+            input_tokens:
+              type: integer_or_null
+            output_tokens:
+              type: integer_or_null
+            cost:
+              type: decimal_or_null
+
+        result:
+          enum:
+            - SUCCEEDED
+            - FAILED
+            - BLOCKED
+            - INTERRUPTED
+            - CANCELLED
+
+# ============================================================
+# 10. ARTEFATOS
+# ============================================================
+
+    artifact:
+
+      primary_key: artifact_id
+
+      fields:
+
+        artifact_id:
+          type: string
+          pattern: &quot;^ART-[0-9]{6,}$&quot;
+
+        type:
+          type: string
+
+        locator:
+          type: string
+
+        version:
+          type: string
+
+        content_hash:
+          type: string_or_null
+
+        generated_by_run:
+          type: reference
+
+        derived_from:
+          type: array
+
+        created_at:
+          type: datetime
+
+# ============================================================
+# 11. EVIDÊNCIA
+# ============================================================
+
+    evidence:
+
+      primary_key: evidence_id
+
+      fields:
+
+        evidence_id:
+          type: string
+          pattern: &quot;^EVD-[0-9]{6,}$&quot;
+
+        evidence_type:
+          enum:
+            - FILE
+            - URL
+            - SCREENSHOT
+            - LOG
+            - TEST_RESULT
+            - QUERY_RESULT
+            - SYSTEM_RECORD
+            - CHECKLIST
+            - HUMAN_ATTESTATION
