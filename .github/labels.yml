@@ -1,7 +1,6 @@
-# Inventário declarativo; NÃO é workflow nem configuração já aplicada.
-# Fonte: https://github.com/Sas-Executar/Copiloto/blob/claude/gifted-brown-7u1e5d/CLAUDE.md
-# Blob: 566707735af5e7845d50bc7bcddfde0234843cad
-# Cores e descrições omitidas: não foram verificadas.
+# Proposta local de labels; NÃO é configuração aplicada.
+# Validar nomes, semântica e necessidade com o usuário antes de criar no GitHub.
+# Não inferir automaticamente labels de outro sistema.
 labels:
   - name: "type:program-epic"
   - name: "type:macroarea-epic"

@@ -1,9 +1,6 @@
 # Entrada para Claude
-Leia e cumpra [AGENTS.md](AGENTS.md) e [INSTRUCOES.md](INSTRUCOES.md).
+Leia [AGENTS.md](AGENTS.md), [INSTRUCOES.md](INSTRUCOES.md) e [docs/NOTION-ROTA.md](docs/NOTION-ROTA.md).
 
-## Governança de Issues
-Alvo: executar-23/Copiloto-ops.
-Título: `[TIPO] <ID> — <descrição>`. Use type canônico, approval:pendente, gate confirmado ou gate:tbd; área quando comprovada e portfólio identificado no corpo, sem inventar label.
-Confirme Epic, vincule e valide a sub-issue. WIP=1; aprovação exclusivamente humana.
-Lista e procedimento canônicos: [Labels](https://github.com/Sas-Executar/Copiloto/blob/claude/gifted-brown-7u1e5d/CLAUDE.md#labels-use-somente-estas) e [ADD_TASK](https://github.com/Sas-Executar/Copiloto/blob/claude/gifted-brown-7u1e5d/CLAUDE.md#add_task).
-Não substitua instruções de outros repositórios nem presuma autorização para alterá-los.
+## Operação
+Notion é o banco de informações; executar-23/Copiloto-ops é o único GitHub operacional desta arquitetura. Comece no Agent Runner, consulte o Master Index e registre fonte Notion ↔ Issue GitHub nos dois sentidos.
+WIP=1. IDs devem estar confirmados na fonte. Issue nasce com approval:pendente quando disponível; aprovação é ato humano. Gate desconhecido: gate:tbd. Não criar issue órfã nem alegar sincronização automática.

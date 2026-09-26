@@ -1,19 +1,14 @@
 # Regras para agentes
-Escopo: todo executar-23/Copiloto-ops.
+Escopo: executar-23/Copiloto-ops.
 
-1. Leia README.md, INSTRUCOES.md, docs/NOTION-ROTA.md, docs/FONTES.md e docs/ESTADO.md.
-2. Este é o alvo das Issues e da governança operacional. Não redirecione automaticamente para executar-Blog ou Sas-Executar/OPS-COPILOTO.
-3. WIP=1: uma tarefa em execução, sem frentes paralelas.
-4. Preserve IDs canônicos; não invente portfolio_id, artifact_id, gate_id ou Epic. M2 é a iniciativa Blog, não licença para classificar qualquer tarefa como M2.
-5. Toda issue nasce approval:pendente; só ação humana explícita permite approval:aprovado. Fechar registra execução, não aprovação.
-6. Use somente labels canônicas. Extensões exigem proposta e aprovação; não crie type:task, area:deploy ou portfolio:M2 por inferência.
-7. Owner A_DEFINIR implica sem assignee. Use gate:tbd se desconhecido. Não infira relações bloqueadas por GAP-DEP-01.
-8. Confirme Epic e capacidade de vinculação antes de criar tarefa. URL no corpo não comprova hierarquia nativa.
-9. A planilha canônica prevalece sobre o espelho. Divergência exige type:conflict com versões e fontes; não resolva silenciosamente.
-10. Não publique credenciais, segredos, dados privados ou logs sensíveis. Este repositório é público.
-11. Preserve trabalho alheio. Descubra ferramentas reais, valide alterações e respeite regras de branch. Autorizações do Blog não se transferem automaticamente.
-12. Diante de bloqueio de permissão, pare e reporte; não contorne. Não declare operações não verificadas.
-13. Entre no Notion pelo Agent Runner e Master Index do hub; registre na Issue a URL/ID da página-fonte e, no índice, o backlink da Issue/PR. Rota declarada não implica acesso ao outro workspace. Sem permissão, reporte bloqueio e não copie conteúdo não lido.
-14. Saída em pt-BR, até 500 palavras, com resultado, evidências, pendências e próxima ação única.
+1. A arquitetura atual tem somente Notion (banco de informações) e este GitHub (execução e rastreabilidade). Leia README.md, INSTRUCOES.md, docs/NOTION-ROTA.md e docs/ESTADO.md.
+2. Entre pelo Agent Runner e Master Index do Notion. Consulte apenas páginas do workspace conectado necessárias à tarefa. Registre URL/ID da página-fonte na Issue e backlink da Issue/commit no índice.
+3. WIP=1: execute uma tarefa por vez. Preserve IDs registrados no Notion; não invente ID, gate, Epic, owner ou dependência.
+4. Sem owner confirmado, registre A_DEFINIR e não atribua assignee. Gate indefinido: gate:tbd. Se o esquema de labels ainda não estiver aprovado/configurado, registre a classificação no corpo e peça decisão antes de criar objeto que dependa dela.
+5. Toda Issue nova começa com approval:pendente quando a label estiver disponível. Só ação humana explícita permite approval:aprovado. Fechar é execução, não aprovação.
+6. Confirme Epic local e ferramenta de vínculo antes de criar sub-issue; link textual não é vínculo nativo. Não declare como aplicado o que existe só em documentação.
+7. Decisões de produto, arquitetura, processo ou integração devem ser registradas em 03 — ADRs. O Master Index é registro transversal; não substitui a fonte.
+8. Não publique segredos, credenciais ou conteúdo privado neste repositório público. Acesso ao Notion e ao GitHub são independentes; bloqueio de permissão exige parar a ação afetada.
+9. Preserve alterações alheias, verifique branch/permissões, valide o resultado e reporte evidência. Saída humana em pt-BR, até 500 palavras.
 
-Modo transform entrega procedimentos. Executar prompts exige pedido correspondente; documentação não representa aplicação automática no GitHub.
+Prompts documentam procedimentos e não executam configuração automaticamente.

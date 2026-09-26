@@ -1,14 +1,14 @@
-# [TIPO] <ID canônico> — <descrição>
-Rascunho: não publicar sem confirmar ID, labels e pai.
+# [TIPO] <ID confirmado> — <descrição>
+Rascunho; não publicar com campos obrigatórios indefinidos.
 
-- Repositório: executar-23/Copiloto-ops
-- ID e fonte:
-- portfolio_id:
-- Epic pai confirmado:
+- Plataforma de execução: executar-23/Copiloto-ops
+- Página Notion-fonte (URL/ID):
+- ID de trabalho:
+- Epic pai local, se aprovado e existente:
 - Owner: A_DEFINIR
-- Aprovação inicial: approval:pendente
+- Aprovação inicial: pendente
 - Gate: gate:tbd
-- Labels canônicas:
+- Labels existentes e aprovadas:
 - Prioridade:
 - Milestone, se aplicável:
 
@@ -16,10 +16,7 @@ Rascunho: não publicar sem confirmar ID, labels e pai.
 ## Escopo
 ## Critérios de aceite
 - [ ] Entrega verificada
-- [ ] Vínculo de sub-issue confirmado
-- [ ] Evidências registradas
+- [ ] Fonte Notion e backlink registrados
 ## Dependências
-URLs, motivo e vínculo nativo verificado.
-## Fontes
-## Evidências
+## Evidência de execução
 ## Decisões humanas pendentes

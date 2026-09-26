@@ -1,26 +1,19 @@
 # Copiloto-ops
-Repositório-alvo: **executar-23/Copiloto-ops**. Operação e governança do GTM-Blog, com instruções para agentes e execução rastreável.
+Operação do GTM-Blog em duas plataformas: **Notion como banco de informações** e **GitHub executar-23/Copiloto-ops como execução e rastreabilidade**.
 
-## Comece aqui
-- [AGENTS.md](AGENTS.md): regras permanentes.
-- [CLAUDE.md](CLAUDE.md): entrada para Claude.
-- [INSTRUCOES.md](INSTRUCOES.md): protocolo operacional.
-- [Modelo de operação](docs/MODELO-OPERACIONAL.md).
-- [Rota Notion ↔ GitHub](docs/NOTION-ROTA.md), [fontes verificadas](docs/FONTES.md) e [estado](docs/ESTADO.md).
-- [Prompt 1: configurar este repositório](prompts/01-bootstrap-copiloto-ops.md).
-- [Prompt 2: orientar agentes](prompts/02-agentes.md).
-- [Modelo de tarefa](templates/tarefa.md).
+## Entrada
+- [AGENTS.md](AGENTS.md) — regras dos agentes.
+- [CLAUDE.md](CLAUDE.md) e [INSTRUCOES.md](INSTRUCOES.md) — protocolo.
+- [Notion ↔ GitHub](docs/NOTION-ROTA.md) — páginas e fluxo.
+- [Modelo operacional](docs/MODELO-OPERACIONAL.md), [fontes](docs/FONTES.md) e [estado](docs/ESTADO.md).
+- [Prompt de configuração](prompts/01-bootstrap-copiloto-ops.md), [orientação de agentes](prompts/02-agentes.md) e [modelo de tarefa](templates/tarefa.md).
 
-## Rota de trabalho
-Entre pelo [Agent Runner](https://app.notion.com/p/3e7d1d673fb3814bbe40d200227da25c) e [Master Index](https://app.notion.com/p/3e7d1d673fb381109e31eee5060e1b62) do Notion. Consulte [o mapa de rotas](docs/NOTION-ROTA.md) antes de relacionar uma página à Issue. O corpus da outra conta está mapeado, mas seu acesso ainda não foi validado nesta conexão.
+## Rota única
+1. Entrar no [GTM-Blog — Launch Control](https://app.notion.com/p/3e7d1d673fb381899d77e41b766525ac), ler [00 — Agent Runner](https://app.notion.com/p/3e7d1d673fb3814bbe40d200227da25c) e consultar [01 — Master Index](https://app.notion.com/p/3e7d1d673fb381109e31eee5060e1b62).
+2. Consultar a página Notion pertinente. Registrar a URL e o ID na Issue do [Copiloto-ops](https://github.com/executar-23/Copiloto-ops/issues).
+3. Registrar no Master Index o número/link da Issue e a evidência de execução.
 
-## Como abrir uma tarefa
-Use [Issues deste repositório](https://github.com/executar-23/Copiloto-ops/issues).
-Confirme ID e Epic, depois use `[TIPO] <ID> — <descrição>`. Informe objetivo, escopo, aceite, fontes, owner e dependências.
-Selecione somente labels da [lista canônica](https://github.com/Sas-Executar/Copiloto/blob/claude/gifted-brown-7u1e5d/CLAUDE.md#labels-use-somente-estas). Toda issue nasce com approval:pendente. Owner desconhecido: A_DEFINIR, sem assignee. Gate desconhecido: gate:tbd.
-Confirme o vínculo ao Epic; um link no corpo não substitui sub-issue. Se não houver ID ou Epic seguro, pergunte antes de criar.
+Links cruzados dão rastreabilidade; **não há sincronização automática**. Cada plataforma exige permissão própria.
 
-## Limites
-Copiloto é fonte do schema; executar-Blog é referência técnica. Não modificar esses repositórios nem Sas-Executar/OPS-COPILOTO neste bootstrap.
-M2 identifica a iniciativa Executar Blog, não um novo ID inventado para este repositório.
-Documentação pronta não significa labels, milestones ou hierarquia configurados; consulte o estado real.
+## Criar tarefa
+Confirme ID, fonte, escopo, aceite e Epic local. Título: `[TIPO] <ID> — <descrição>`. Se dados ou capacidade de vínculo faltarem, não crie issue órfã. Nenhuma issue nasce aprovada. Consulte o estado real: labels, milestones, Epic e Project ainda não estão configurados por esta documentação.
