@@ -1,7 +1,7 @@
 # Regras para agentes
 Escopo: executar-23/Copiloto-ops.
 
-1. A arquitetura atual tem somente Notion (banco de informações) e este GitHub (execução e rastreabilidade). Leia README.md, INSTRUCOES.md, docs/NOTION-ROTA.md e docs/ESTADO.md.
+1. A arquitetura atual tem somente Notion (banco de informações) e este GitHub (execução e rastreabilidade). Leia README.md, INSTRUCOES.md, docs/NOTION-ROTA.md, docs/ESTADO.md e, antes de criar ou decompor trabalho, docs/SCHEMA-TRABALHO.md. Para execução repetível, use o Runbook correspondente em Runbooks/.
 2. Entre pelo Agent Runner e Master Index do Notion. Consulte apenas páginas do workspace conectado necessárias à tarefa. Registre URL/ID da página-fonte na Issue e backlink da Issue/commit no índice.
 3. WIP=1 por agente: uma alteração ativa por agente, admitindo agentes simultâneos. Preserve IDs registrados no Notion; não invente ID, gate, Epic, owner ou dependência.
 4. Sem owner confirmado, registre A_DEFINIR e não atribua assignee. Gate indefinido: gate:tbd. Se o esquema de labels ainda não estiver aprovado/configurado, registre a classificação no corpo e peça decisão antes de criar objeto que dependa dela.

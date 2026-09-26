@@ -45,7 +45,7 @@ Referência: https://docs.github.com/en/issues/planning-and-tracking-with-projec
 - Tasks: https://app.notion.com/p/3e7d1d673fb381bd8f88e5c38979d403
 - Plano de Implementação: https://app.notion.com/p/3e7d1d673fb381368574fa687f7cf0eb
 
-## Hierarquia operacional prevista
+## Hierarquia operacional
 
 ```text
 Project #1
@@ -54,7 +54,7 @@ Project #1
         └── Sub-issues
 ```
 
-A criação de Epics, Issues, labels, milestones e vínculos nativos deve ocorrer somente após confirmação do schema operacional e da capacidade de vínculo no GitHub.
+O schema operacional foi definido em [docs/SCHEMA-TRABALHO.md](../../docs/SCHEMA-TRABALHO.md). Vínculos nativos só podem ser declarados quando efetivamente aplicados por ferramenta compatível.
 
 ## Regras
 
@@ -66,6 +66,8 @@ A criação de Epics, Issues, labels, milestones e vínculos nativos deve ocorre
 6. O Master Index recebe backlinks de Issues, commits e resultados.
 7. Não declarar configuração de Project/workflow como aplicada sem verificação.
 
-## Próxima decisão
+## Primeiro Epic
 
-Definir o schema operacional de Issues e o filtro do auto-add antes de criar a árvore de Epics e Issues.
+O primeiro resultado operacional é `F1-3X`: três ciclos editoriais executados pelo [Runbook de Produção Editorial Multiplataforma](../../Runbooks/RUN-F1-PRODUCAO-EDITORIAL-MULTIPLATAFORMA.md), cada um concluído em `100% VERIFIED`.
+
+A cadência ainda precisa de decisão: o Process Document registra 15 dias/ciclo, enquanto a ficha F1-3X registra 17 dias/pack e cerca de 45 dias para o arco. Não fixar datas até resolver essa divergência.

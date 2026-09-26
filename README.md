@@ -5,7 +5,8 @@ Operação do GTM-Blog em duas plataformas: **Notion como banco de informações
 - [AGENTS.md](AGENTS.md) — regras dos agentes.
 - [CLAUDE.md](CLAUDE.md) e [INSTRUCOES.md](INSTRUCOES.md) — protocolo.
 - [Notion ↔ GitHub](docs/NOTION-ROTA.md) — páginas e fluxo.
-- [Modelo operacional](docs/MODELO-OPERACIONAL.md), [fontes](docs/FONTES.md) e [estado](docs/ESTADO.md).
+- [Modelo operacional](docs/MODELO-OPERACIONAL.md), [schema de trabalho](docs/SCHEMA-TRABALHO.md), [fontes](docs/FONTES.md) e [estado](docs/ESTADO.md).
+- [Runbooks](Runbooks/README.md) — execução operacional repetível.
 - [Prompt de configuração](prompts/01-bootstrap-copiloto-ops.md), [orientação de agentes](prompts/02-agentes.md) e [modelo de tarefa](templates/tarefa.md).
 
 ## Rota única
