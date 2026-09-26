@@ -6,7 +6,11 @@ Alvo confirmado: executar-23/Copiloto-ops; repositório inicialmente vazio, bran
 Instruções, README, modelo operacional, fontes, dois prompts, modelo de tarefa, inventário de labels e proteção básica de arquivos sensíveis.
 Inventário extraído do CLAUDE.md canônico; configuração GitHub ainda não aplicada.
 
+## Correlação Notion ↔ GitHub
+Rotas do hub verificadas e espelhadas em `docs/NOTION-ROTA.md`. O Master Index externo do corpus foi declarado no hub, porém não está acessível nesta conexão (404); nenhum conteúdo externo foi lido ou copiado. Links cruzados são procedimento, não sincronização automática.
+
 ## Pendências
+- Obter acesso autorizado ao workspace do corpus para validar as rotas D01–D23.
 - Inventariar labels existentes no alvo e criar faltantes.
 - Definir política de milestones.
 - Confirmar necessidade e hierarquia de Epic operacional local.

@@ -3,6 +3,9 @@
 Identifique objetivo, modo, alvo, fontes e aceite. Consulte estado real; escolha uma única tarefa.
 Alvo confirmado pelo usuário: executar-23/Copiloto-ops. Sas-Executar/OPS-COPILOTO não recebe novas alterações.
 
+## Rota Notion ↔ GitHub
+O hub Notion conectado é `hub.executar@gmail.com`: [Runner](https://app.notion.com/p/3e7d1d673fb3814bbe40d200227da25c) → [Master Index](https://app.notion.com/p/3e7d1d673fb381109e31eee5060e1b62). Consulte [docs/NOTION-ROTA.md](docs/NOTION-ROTA.md) para D01–D23 e o status do acesso externo. O Master Index do corpus `sas.executar@gmail.com` está mapeado, mas não acessível na conexão atual. Cada Issue deve apontar à fonte Notion confirmada; cada saída no índice deve apontar de volta à Issue/PR/commit. Permissão de uma plataforma não se transfere à outra.
+
 ## Execução
 1. Leia instruções e fontes. Verifique permissões e branch atual.
 2. Confirme IDs, pai, owner e gates. Use gate:tbd quando faltar correspondência; pergunte se ID ou pai forem ambíguos.

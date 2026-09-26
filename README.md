@@ -6,10 +6,13 @@ Repositório-alvo: **executar-23/Copiloto-ops**. Operação e governança do GTM
 - [CLAUDE.md](CLAUDE.md): entrada para Claude.
 - [INSTRUCOES.md](INSTRUCOES.md): protocolo operacional.
 - [Modelo de operação](docs/MODELO-OPERACIONAL.md).
-- [Fontes verificadas](docs/FONTES.md) e [estado](docs/ESTADO.md).
+- [Rota Notion ↔ GitHub](docs/NOTION-ROTA.md), [fontes verificadas](docs/FONTES.md) e [estado](docs/ESTADO.md).
 - [Prompt 1: configurar este repositório](prompts/01-bootstrap-copiloto-ops.md).
 - [Prompt 2: orientar agentes](prompts/02-agentes.md).
 - [Modelo de tarefa](templates/tarefa.md).
+
+## Rota de trabalho
+Entre pelo [Agent Runner](https://app.notion.com/p/3e7d1d673fb3814bbe40d200227da25c) e [Master Index](https://app.notion.com/p/3e7d1d673fb381109e31eee5060e1b62) do Notion. Consulte [o mapa de rotas](docs/NOTION-ROTA.md) antes de relacionar uma página à Issue. O corpus da outra conta está mapeado, mas seu acesso ainda não foi validado nesta conexão.
 
 ## Como abrir uma tarefa
 Use [Issues deste repositório](https://github.com/executar-23/Copiloto-ops/issues).
