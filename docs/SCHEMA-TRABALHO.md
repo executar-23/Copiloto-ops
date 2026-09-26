@@ -82,7 +82,7 @@ Não declarar esses campos como configurados sem evidência.
 ## F1-3X
 - Epic: `F1-3X`.
 - 3 Issues de ciclo editorial, em sequência.
-- Cada ciclo usa `Runbooks/RUN-F1-PRODUCAO-EDITORIAL-MULTIPLATAFORMA.md`.
+- Cada ciclo usa `Runbooks/RUN-F1-PRODUCAO-EDITORIAL-MULTIPLATAFORMA.yaml`.
 - Sub-issues recomendadas por ciclo: Entrada+Topic Pack; Peça-mãe; Derivados; Coerência+governança; Handoff.
 - Os 22 passos do Runbook permanecem checklist/evidência dentro desses grupos.
 - WIP=1 por agente.
