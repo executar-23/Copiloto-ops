@@ -60,7 +60,7 @@ Passo atômico que não exige objeto próprio.
 Aprovação humana é eixo separado do estado de execução.
 
 ## Labels — estado desejado
-Ver `.github/labels.yml`. O arquivo documenta o schema, mas não comprova que as labels existem no GitHub.
+Ver `.github/labels.yml`. O arquivo documenta o schema, mas não comprova que as labels existem no GitHub. As labels `state/*` e `type/*` do Copiloto Operacional e a equivalência com os estados acima estão pendentes de decisão; ver `docs/NOTION-ROTA.md` (Copiloto Operacional como conector).
 
 ## Milestones
 Usar para janela/release compartilhada, não como substituto de Epic. Só criar quando datas e escopo temporal estiverem confirmados. F1-3X não recebe milestone enquanto a divergência 15d × 17d não for resolvida.
