@@ -3,6 +3,7 @@
 **Base normativa:** CMD-COP-001, "Índice de Slash Commands e IDs Verbais". O texto original está preservado na §1, sem remoções nem renomeações.
 **Extensão:** HANDOFF-AGENTES-001 §4 (Camadas 2 e 3) e ADR-0003.
 **Regra de manutenção:** todo ID novo entra aqui **antes** de virar command, skill ou agente. IDs e slashes existentes nunca são removidos nem renomeados; legados viram aliases.
+**Módulos:** desde a emenda b do ADR-0003 (2026-09-27), operations, productivity e product-management são skills internas do `executar-cop` (Apache-2.0, ver `THIRD_PARTY_NOTICES.md`).
 **Validação:** `python3 scripts/validar_plugin.py` confere unicidade, correspondência ID ↔ command e referências ao grafo.
 
 Formato canônico das linhas de ID (lidas pelo validador): `CV-XXX-NNN — /comando — ação única`.
@@ -117,22 +118,22 @@ Proveniência do mapeamento pelo modelo epistêmico (`nucleo-dependencias.md` §
 | CV-MAPA-001 | /mapa | skill `executar-mapa-os` | MAPA-OS | DERIVED — "emitir MAPA-OS" = objeto da skill executar-mapa-os | **sim** | não |
 | CV-EVID-001 | /evidencia | skill `copiloto-executar` | COPILOTO-EXECUTAR | DERIVED — a skill cobre "registrar evidência" | não | não |
 | CV-BLOQ-001 | /bloqueio | skill `copiloto-executar` | COPILOTO-EXECUTAR | DERIVED — a skill cobre "tratar bloqueio" | não | não |
-| CV-ATUAL-001 | /atualizar | `productivity:update` | PRODUCTIVITY | DERIVED — seção "produtividade" + skill update (sync mínimo) | não | não |
-| CV-ATUAL-002 | /atualizar-abrangente | `productivity:update --comprehensive` | PRODUCTIVITY | DERIVED — argumento `--comprehensive` da skill update | não | não |
-| CV-CONTEXTO-001 | /contexto | `productivity:memory-management` | PRODUCTIVITY | DERIVED — memória de trabalho decodifica o contexto | não | não |
-| CV-MEMORIA-001 | /memoria | `productivity:memory-management` | PRODUCTIVITY | DERIVED — "memória operacional" = skill memory-management | não | não |
-| CV-CAP-001 | /capacidade | `operations:capacity-plan` | OPERATIONS | DIRECT — legado /planejar-capacidade | não | sim, se houver benchmark |
-| CV-MUD-001 | /mudanca | `operations:change-request` | OPERATIONS | DIRECT — legado /solicitar-mudanca | não | sim, se houver referência externa |
-| CV-PROC-001 | /processo | `operations:process-doc` | OPERATIONS | DIRECT — legado /documentar-processo | não | sim, se houver referência externa |
-| CV-POP-001 | /procedimento | `operations:runbook` | OPERATIONS | DIRECT — legado /procedimento-operacional | não | sim, se houver referência externa |
-| CV-SIT-001 | /situacao | `operations:status-report` | OPERATIONS | DIRECT — legado /relatorio-situacao | não | sim, se houver benchmark |
-| CV-FORN-001 | /fornecedor | `operations:vendor-review` | OPERATIONS | DIRECT — legado /avaliar-fornecedor | não | **sim** (dados de mercado) |
-| CV-RISCO-001 | /risco | `operations:risk-assessment` | OPERATIONS | DERIVED — seção "operações" + skill risk-assessment | não | sim, se houver fato externo |
-| CV-CONF-001 | /conformidade | `operations:compliance-tracking` | OPERATIONS | DERIVED — "normas" = skill compliance-tracking | não | **sim** (normas vigentes) |
-| CV-OTIM-001 | /otimizar | `operations:process-optimization` | OPERATIONS | DERIVED — "reduzir desperdício" = process-optimization | não | sim, se houver benchmark |
-| CV-ROADMAP-001 | /roadmap | `product-management:roadmap-update` | PRODUCT-MANAGEMENT | DIRECT — handoff §2 "roadmap" | não | sim, se houver fato de mercado |
-| CV-SPEC-001 | /spec | `product-management:write-spec` | PRODUCT-MANAGEMENT | DIRECT — handoff §2 "spec" | não | sim, se houver referência externa |
-| CV-PESQ-001 | /pesquisa | `product-management:synthesize-research` | PRODUCT-MANAGEMENT | DIRECT — handoff §2 "pesquisa" | não | sim, se houver dado externo |
+| CV-ATUAL-001 | /atualizar | `executar-cop:update` | PROD-UPDATE | DERIVED — seção "produtividade" + skill update (sync mínimo) | não | não |
+| CV-ATUAL-002 | /atualizar-abrangente | `executar-cop:update --comprehensive` | PROD-UPDATE | DERIVED — argumento `--comprehensive` da skill update | não | não |
+| CV-CONTEXTO-001 | /contexto | `executar-cop:memory-management` | PROD-MEMORY | DERIVED — memória de trabalho decodifica o contexto | não | não |
+| CV-MEMORIA-001 | /memoria | `executar-cop:memory-management` | PROD-MEMORY | DERIVED — "memória operacional" = skill memory-management | não | não |
+| CV-CAP-001 | /capacidade | `executar-cop:capacity-plan` | OPS-CAPACITY-PLAN | DIRECT — legado /planejar-capacidade | **sim** (se gerar gráfico/board) | sim, se houver benchmark |
+| CV-MUD-001 | /mudanca | `executar-cop:change-request` | OPS-CHANGE-REQUEST | DIRECT — legado /solicitar-mudanca | não | sim, se houver referência externa |
+| CV-PROC-001 | /processo | `executar-cop:process-doc` | OPS-PROCESS-DOC | DIRECT — legado /documentar-processo | **sim** (se gerar gráfico/board) | sim, se houver referência externa |
+| CV-POP-001 | /procedimento | `executar-cop:runbook` | OPS-RUNBOOK | DIRECT — legado /procedimento-operacional | não | sim, se houver referência externa |
+| CV-SIT-001 | /situacao | `executar-cop:status-report` | OPS-STATUS-REPORT | DIRECT — legado /relatorio-situacao | **sim** (se gerar gráfico/board) | sim, se houver benchmark |
+| CV-FORN-001 | /fornecedor | `executar-cop:vendor-review` | OPS-VENDOR-REVIEW | DIRECT — legado /avaliar-fornecedor | não | **sim** (dados de mercado) |
+| CV-RISCO-001 | /risco | `executar-cop:risk-assessment` | OPS-RISK-ASSESSMENT | DERIVED — seção "operações" + skill risk-assessment | não | sim, se houver fato externo |
+| CV-CONF-001 | /conformidade | `executar-cop:compliance-tracking` | OPS-COMPLIANCE-TRACKING | DERIVED — "normas" = skill compliance-tracking | não | **sim** (normas vigentes) |
+| CV-OTIM-001 | /otimizar | `executar-cop:process-optimization` | OPS-PROCESS-OPTIMIZATION | DERIVED — "reduzir desperdício" = process-optimization | não | sim, se houver benchmark |
+| CV-ROADMAP-001 | /roadmap | `executar-cop:roadmap-update` | PM-ROADMAP-UPDATE | DIRECT — handoff §2 "roadmap" | **sim** (se gerar gráfico/board) | sim, se houver fato de mercado |
+| CV-SPEC-001 | /spec | `executar-cop:write-spec` | PM-WRITE-SPEC | DIRECT — handoff §2 "spec" | não | sim, se houver referência externa |
+| CV-PESQ-001 | /pesquisa | `executar-cop:synthesize-research` | PM-SYNTHESIZE-RESEARCH | DIRECT — handoff §2 "pesquisa" | **sim** (se gerar gráfico/board) | sim, se houver dado externo |
 | CV-DEPEND-001 | /dependencias | `executar-cop:executar-dependency-architect` | DEPENDENCY-ARCHITECT | DIRECT — handoff §6 | não | sim, se houver referência externa |
 | CV-ARVORE-001 | /arvore | `executar-cop:executar-arvore-roadmap` | ARVORE-ROADMAP | DIRECT — handoff §6 | não | sim, se houver fato externo |
 | CV-VISUAL-001 | /arvore-visual | `executar-cop:executar-mergulhe` | ARVORE-VISUAL | DIRECT — handoff §6 | **sim** | sim, se houver fato externo |

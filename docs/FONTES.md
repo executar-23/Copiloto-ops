@@ -17,6 +17,7 @@ Data: 2026-09-26.
 - Pacote `EXECUTAR-OPERACOES._.zip` (sha256 `ddc571ee…7e92`), fornecido pelo usuário. Contém: CMD-COP-001 (docx), `calendario-light-mode-preview.png`, `executar-arvore-roadmap`, `EXECUTAR-ARVORE-VISUAL-v1.0`, `obsidian-editorial-pipeline-v2.2.skill` e os plugins Anthropic `operations`, `productivity`, `product-management` e `cowork-plugin-management`.
   - Também traz `executar-plan-mode`, `product-code-development` e `EXECUTAR-TAREFAS`, que ficaram fora do escopo.
 - Prompt mestre `EXECUTAR-DEPENDENCY-ARCHITECT-001`, enviado na conversa e preservado em `plugins/executar-cop/skills/executar-dependency-architect/references/prompt-mestre.yaml`.
+- `EXECUTAR_HUB_Control_Plane_v2.xlsx` (sha256 `2de0a915cfa78170…`), fornecido pelo usuário em 2026-09-27. É a fonte do PF-24 em `projects/EXECUTAR-HUB/control-plane/PF-24/`. **Não versionado**, porque contém dado pessoal de terceiro (regra 8).
 
 ## Documentação local importada
 A base AIKB fornecida diretamente pelo usuário nesta conversa foi preservada em `projects/GTM-Blog/knowledge/sources/`, com índice em `projects/GTM-Blog/knowledge/README.md`.

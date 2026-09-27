@@ -37,3 +37,19 @@ O handoff previa o registro epistêmico de dependências apenas na skill `execut
 - Plugins Anthropic (`operations`, `productivity`, `product-management`) e skills da conta (`copiloto-executar`, `executar-mapa-os`) são dependências externas. Quando estão ausentes, o comando responde com bloqueado-externo, sem simular a execução.
 - A validação do especialista com dados reais depende do envio da planilha (GAP).
 - Não há `.mcp.json` nem hooks nesta etapa, porque nenhum ID verbal os exige.
+
+## Emenda b — 2026-09-27: plugins da Anthropic incorporados
+**Decisão do usuário:** `operations`, `productivity` e `product-management` passam a ficar **dentro** do `executar-cop`, e não como dependências externas.
+
+- **Incorporadas:** só as skills mapeadas a IDs verbais, mais as dependências documentadas delas:
+  - 9 de operações;
+  - `update` e `memory-management`, além de `start` e `task-management`, que são exigidas por `update` (DEP-COP-004 e 005, DIRECT);
+  - 3 de produto.
+  - O resto (outras skills de PM, o comando `brainstorm` e os `.mcp.json`) fica fora, por não ter ID verbal.
+- **Licença:** Apache-2.0, com `LICENSE-APACHE-2.0` e `THIRD_PARTY_NOTICES.md`. Cada arquivo modificado traz um aviso próprio.
+- **Modificações:**
+  - seção "Integração executar-cop" e `user-invocable: false` nos `SKILL.md`;
+  - dashboard migrado para o token do calendário;
+  - `CONNECTORS.md` unificado.
+- **Consequência:** a consequência anterior sobre "plugins Anthropic como dependências externas" fica **substituída**. Continuam externas apenas as skills da conta `copiloto-executar` e `executar-mapa-os`.
+- **Grafo:** os nós agregados OPERATIONS, PRODUCTIVITY e PRODUCT-MANAGEMENT foram substituídos por um nó por skill.

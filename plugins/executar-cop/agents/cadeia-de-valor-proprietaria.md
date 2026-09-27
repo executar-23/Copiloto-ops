@@ -37,6 +37,7 @@ As quatro skills (`executar-dependency-architect`, `executar-arvore-roadmap`, `e
    - Se falta saída de um nó anterior: `bloqueado-interno`. Diga qual comando a produz.
    - Se falta arquivo, plataforma ou aprovação de terceiro: `bloqueado-externo`. Siga com os ramos independentes.
    - Fora do fluxo proprietário (plano avulso, ciclo editorial com formulário próprio), a skill correspondente roda sozinha.
+   - Declare esse resultado ao usuário **antes** de procurar arquivos. Primeiro diga qual nó está bloqueado e por qual aresta; depois, o que falta para destravá-lo.
 2. **Executar a skill do nó**, lendo o SKILL.md dela, com a regra de busca web e o token que ela declara:
    - `/dependencias`: entrega sempre as três partes. As fases são consequência das dependências reais, nunca da ordem A00–A12.
    - `/arvore`: `estrutura.json` validado antes de qualquer renderização. As `depende_de` inferidas recebem tag epistêmica.

@@ -5,8 +5,8 @@ Plugin do Claude Code/Cowork que implementa o [HANDOFF-AGENTES-001](../../docs/a
 O plugin oferece uma interface única, por slash ou por frase, que resolve um **ID verbal** (`CV-XXX-NNN`), roda o **pré-voo de dependências** e delega ao módulo certo. Toda resposta sai em português do Brasil. Toda saída visual segue o **token do calendário**.
 
 ```
-CAMADA 1 — Orquestração e setup    orquestrador-cop · rotina (copiloto-executar, executar-mapa-os) · productivity
-CAMADA 2 — Skills técnicas         dominio-operacoes (operations) · dominio-produto (product-management)
+CAMADA 1 — Orquestração e setup    orquestrador-cop · rotina (copiloto-executar, executar-mapa-os) · update/start/task-management/memory-management
+CAMADA 2 — Skills técnicas         dominio-operacoes (9 skills de operações) · dominio-produto (roadmap-update, write-spec, synthesize-research)
 CAMADA 3 — Cadeia proprietária     executar-dependency-architect → executar-arvore-roadmap → executar-mergulhe → obsidian-editorial-pipeline
 ```
 
@@ -14,7 +14,8 @@ CAMADA 3 — Cadeia proprietária     executar-dependency-architect → executar
 | Tipo | Itens |
 |---|---|
 | Agentes | `orquestrador-cop` (entrada única), `dominio-operacoes`, `dominio-produto`, `cadeia-de-valor-proprietaria` |
-| Skills | `executar-dependency-architect`, `executar-arvore-roadmap`, `executar-mergulhe` (Árvore Visual), `obsidian-editorial-pipeline` v2.2 |
+| Skills proprietárias (4) | `executar-dependency-architect`, `executar-arvore-roadmap`, `executar-mergulhe` (Árvore Visual), `obsidian-editorial-pipeline` v2.2 |
+| Skills incorporadas da Anthropic (16, Apache-2.0) | operações: `capacity-plan`, `change-request`, `process-doc`, `runbook`, `status-report`, `vendor-review`, `risk-assessment`, `compliance-tracking`, `process-optimization` · produtividade: `update`, `start`, `task-management`, `memory-management` (+ `skills/dashboard.html`) · produto: `roadmap-update`, `write-spec`, `synthesize-research`. Todas são `user-invocable: false`, e a interface do usuário são os commands CV. Ver `THIRD_PARTY_NOTICES.md` e `CONNECTORS.md` |
 | Commands | 28 slashes, um por ID verbal (lista em `references/cmd-cop-index.md`) |
 | Referências | `cmd-cop-index.md` (índice único), `nucleo-dependencias.md` (contrato transversal), `grafo-dependencias.schema.json` + `grafo-dependencias.json` |
 | Assets | `design-tokens/calendario-light-mode.md` + PNG de referência |
@@ -29,17 +30,10 @@ Não há `.mcp.json` nem hooks: nenhum ID verbal exige isso nesta versão.
 ```
 Para desenvolvimento local: `claude --plugin-dir plugins/executar-cop`.
 
-### Pré-requisitos das Camadas 1 e 2 (dependências externas)
-Os comandos de produtividade, operações e produto delegam a plugins da Anthropic:
-```text
-/plugin marketplace add anthropics/knowledge-work-plugins
-/plugin install productivity@knowledge-work-plugins
-/plugin install operations@knowledge-work-plugins
-/plugin install product-management@knowledge-work-plugins
-```
-Eles **não** estão em `dependencies` do `plugin.json`, por uma razão prática. Uma dependência declarada ali que não se resolve impede o plugin inteiro de carregar, o que derrubaria também a cadeia proprietária. Por isso, quando um desses plugins está ausente, o comando correspondente responde `bloqueado-externo`, e os demais seguem funcionando (núcleo §2.9).
+### Skills incorporadas e dependências externas
+Desde a emenda b do ADR-0003, as skills de `operations`, `productivity` e `product-management` estão **dentro** deste plugin: não é preciso instalar nada da Anthropic. Os conectores (`~~project tracker`, `~~chat` etc.) vêm da sua conta; ver `CONNECTORS.md`.
 
-A rotina (`/bomdia`, `/agora`, `/estado`, `/fechardia`, `/replanejamento`, `/evidencia`, `/bloqueio`) usa a skill `copiloto-executar`. O `/mapa` usa `executar-mapa-os`. As duas são skills da conta claude.ai, com fonte fora deste repositório. Opcional: `cowork-plugin-management@knowledge-work-plugins`, para customizar conectores, sem ID verbal.
+A rotina (`/bomdia`, `/agora`, `/estado`, `/fechardia`, `/replanejamento`, `/evidencia`, `/bloqueio`) usa a skill `copiloto-executar`. O `/mapa` usa `executar-mapa-os`. As duas são skills da conta claude.ai, com fonte fora deste repositório. Quando ausentes, esses comandos respondem `bloqueado-externo`, e o restante do plugin segue funcionando (núcleo §2.9).
 
 ## Uso
 - **Rotina diária:** `/bomdia`, `/agora`, `/estado`, `/fechardia` e `/replanejamento`, ou os sinônimos "Bom dia, copiloto", "O que faço agora?", "Como estamos?", "Terminei por hoje" e "Preciso mudar o plano".
@@ -65,6 +59,5 @@ python3 plugins/executar-cop/skills/obsidian-editorial-pipeline/tests/run_tests.
 ```
 
 ## Lacunas conhecidas
-- A planilha `EXECUTAR_HUB_Control_Plane_v2.xlsx` real não foi recebida. O especialista foi testado com uma fixture **fictícia** (`skills/executar-dependency-architect/tests/fixtures/`).
-- A definição do PF-24 (reconciliação cruzada) não foi fornecida.
+- A primeira execução real do especialista (PF-24) está em `projects/EXECUTAR-HUB/control-plane/PF-24/`. Ela aguarda validação humana do domínio de valores do 16_REG, do mapeamento de Gates e da decisão sobre a A03.
 - As skills da conta `copiloto-executar` e `executar-mapa-os` não têm fonte neste repositório.

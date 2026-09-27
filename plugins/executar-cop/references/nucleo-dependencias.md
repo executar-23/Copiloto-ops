@@ -47,6 +47,8 @@ Toda skill, command e agente executa o pré-voo **antes** de produzir o resultad
    - `bloqueado-externo`: falta recurso de terceiro ou não instalado. Seguir com os ramos independentes;
    - `perguntar`: há `CONFLICT` ou ambiguidade material. Pedir a decisão mínima.
 
+**Ordem de comunicação:** declare o resultado do pré-voo **antes** de procurar ou pedir entradas. Se a ação depende de outra etapa (por exemplo, `/arvore` depende de `/dependencias` no fluxo proprietário), diga primeiro se ela pode rodar agora e por quê, citando o ID da dependência. Só depois peça ou procure o arquivo que falta. Uma entrada ausente não substitui a explicação da dependência.
+
 **Formato proporcional:** quando não há dependência bloqueante, basta uma linha:
 `Pré-voo: prosseguir — entradas: <X (DIRECT: fonte)>; Gate: <id|gate:tbd>.`
 

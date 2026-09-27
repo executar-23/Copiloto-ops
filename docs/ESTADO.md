@@ -46,10 +46,13 @@ A documentação oficial do GitHub orienta configurar auto-add em **Project → 
 - O arquivo `.github/labels.yml` registra o estado desejado do schema; não comprova criação/aplicação das labels no GitHub.
 
 ## Plugin executar-cop — pendências
-- A planilha `EXECUTAR_HUB_Control_Plane_v2.xlsx` real não foi recebida. O especialista `executar-dependency-architect` foi validado só com uma fixture fictícia.
-- A definição do PF-24 (reconciliação cruzada) não foi fornecida.
-- As skills da conta `copiloto-executar` e `executar-mapa-os` são dependências externas, com fonte fora deste repositório.
-- Os plugins `operations`, `productivity` e `product-management` (`knowledge-work-plugins`) são pré-requisitos documentados, não `dependencies`. Quando faltam, o resultado é bloqueado-externo.
+- **PF-24 executado em 2026-09-27** sobre a planilha real (`projects/EXECUTAR-HUB/control-plane/PF-24/`). O resultado tem 112 linhas para o 16_REG, com status PROPOSED, e as fases F1–F14 cobrindo 1.125 de 1.125 campos. Aguarda validação humana de:
+  - domínio de valores do 16_REG;
+  - mapeamento de Gates;
+  - decisão sobre a A03 (macroárea sem artefato).
+- PF-24 é a "reconciliação cruzada depends_on/blocks entre áreas", registrada na NA-03 da própria planilha.
+- As skills da conta `copiloto-executar` e `executar-mapa-os` continuam como dependências externas, com fonte fora deste repositório.
+- As skills de `operations`, `productivity` e `product-management` foram incorporadas ao plugin (ADR-0003, emenda b; Apache-2.0).
 - Aprovação da Issue #24, Gate (`gate:tbd`) e owner (`A_DEFINIR`) dependem de decisão humana.
 
 ## Ainda não configurado/verificado
