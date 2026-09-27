@@ -7,4 +7,4 @@ Abra Issues apenas no Copiloto-ops. Use título `[TIPO] <ID> — <descrição>` 
 
 WIP=1 por agente; agentes podem atuar simultaneamente com inspeção de mudanças concorrentes. Para arquivos, use main diretamente com sync → inspect → change → validate → commit → sync, sem force-push. Fechar uma Issue é execução, não aprovação. Só humano altera aprovação para aprovado. Após Issue/commit, registre o backlink e o resultado no Master Index. Decisões relevantes vão para ADRs.
 
-Não coloque segredos no GitHub público. Permissões são independentes e links não sincronizam estado. Responda em pt-BR com números e links reais, validação, pendências e próxima ação única.
+Não coloque segredos, credenciais, tokens nem dados pessoais de terceiros no GitHub; conteúdo proprietário do EXECUTAR é permitido (ADR-0003). Permissões são independentes e links não sincronizam estado. Responda em pt-BR com números e links reais, validação, pendências e próxima ação única.
