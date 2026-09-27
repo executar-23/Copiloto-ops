@@ -1,0 +1,136 @@
+[
+  {
+    "fase": "F1",
+    "contexto": "Direção e abertura do ecossistema",
+    "artefatos": [
+      "D01-DOC-DDE-001",
+      "D01-DOC-TAP-001"
+    ],
+    "gate": "G00 INITIATIVE_READY"
+  },
+  {
+    "fase": "F2",
+    "contexto": "Modelo de negócio e economia",
+    "artefatos": [
+      "D01-DOC-MNE-001",
+      "D03-DOC-MFO-001",
+      "D03-DOC-PFO-001",
+      "D01-DOC-MRE-001"
+    ],
+    "gate": "G01 BUSINESS_READY (parcial)"
+  },
+  {
+    "fase": "F3",
+    "contexto": "Mercado, pesquisa e evidências",
+    "artefatos": [
+      "D09-DOC-DEB-001",
+      "D13-DOC-DRM-001",
+      "D09-DOC-PPE-001"
+    ],
+    "gate": "G01 BUSINESS_READY (parcial)"
+  },
+  {
+    "fase": "F4",
+    "contexto": "Governança jurídica e riscos",
+    "artefatos": [
+      "D02-DOC-DGRC-001",
+      "D02-DOC-MRC-001"
+    ],
+    "gate": "G01 BUSINESS_READY (parcial)"
+  },
+  {
+    "fase": "F5",
+    "contexto": "Pessoas e capacidade de execução",
+    "artefatos": [
+      "D04-DOC-PPC-001",
+      "D07-DOC-PEX-001"
+    ],
+    "gate": "G01 BUSINESS_READY (fecha)"
+  },
+  {
+    "fase": "F6",
+    "contexto": "Produto e experiência (A02)",
+    "artefatos": [
+      "D11-DOC-DSI-001",
+      "D10-DOC-DRP-001",
+      "D11-DOC-EEP-001",
+      "D10-DOC-PRD-001"
+    ],
+    "gate": "G02 PRODUCT_READY"
+  },
+  {
+    "fase": "F7",
+    "contexto": "Transição Produto → Engenharia (A03)",
+    "artefatos": [],
+    "gate": "G03 DEVELOPMENT_READY"
+  },
+  {
+    "fase": "F8",
+    "contexto": "Plataformas, dados e privacidade",
+    "artefatos": [
+      "D20-DOC-PPR-001",
+      "D05-DOC-EPGD-001",
+      "D05-DOC-DCM-001",
+      "D02-DOC-PPT-001"
+    ],
+    "gate": "G04 (parcial) · G05 (PPT)"
+  },
+  {
+    "fase": "F9",
+    "contexto": "Engenharia, contratos e blueprints (A04)",
+    "artefatos": [
+      "D12-DOC-ETE-001",
+      "D18-DOC-PCE-001",
+      "D23-DOC-PBL-001"
+    ],
+    "gate": "G04 ENGINEERING_READY"
+  },
+  {
+    "fase": "F10",
+    "contexto": "Implementação e operação",
+    "artefatos": [
+      "D07-DOC-PIM-001",
+      "D08-DOC-MOP-001",
+      "D08-DOC-RUN-001"
+    ],
+    "gate": "G05 RELEASE_READY · G06 GO_LIVE"
+  },
+  {
+    "fase": "F11",
+    "contexto": "Comercial e sucesso do cliente",
+    "artefatos": [
+      "D14-DOC-PCV-001",
+      "D15-DOC-PASC-001"
+    ],
+    "gate": "G07 OPERATIONAL_READY · G08 (parcial)"
+  },
+  {
+    "fase": "F12",
+    "contexto": "Lançamento e conteúdo",
+    "artefatos": [
+      "D13-DOC-GTM-001",
+      "D19-DOC-PAC-001",
+      "D16-DOC-PEM-001"
+    ],
+    "gate": "G08 GTM_READY"
+  },
+  {
+    "fase": "F13",
+    "contexto": "Conhecimento, registros e workbooks",
+    "artefatos": [
+      "D06-DOC-EGC-001",
+      "D06-DOC-RMI-001",
+      "D22-DOC-DRL-001",
+      "D21-DOC-PWB-001"
+    ],
+    "gate": "G09 MEASURED · G11 DOCUMENTED"
+  },
+  {
+    "fase": "F14",
+    "contexto": "Emprego e portfólio (A12)",
+    "artefatos": [
+      "D17-DOC-PEP-001"
+    ],
+    "gate": "gate:tbd"
+  }
+]

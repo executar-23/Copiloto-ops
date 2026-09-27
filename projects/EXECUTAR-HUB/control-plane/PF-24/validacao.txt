@@ -1,0 +1,52 @@
+INFO   14_REG_Artefatos: coluna de ID detectada = 'artifact_id'
+INFO   17_REG_Gates: coluna de ID detectada = 'gate_id'
+INFO   15_REG_Campos: coluna de ID detectada = 'artifact_id'
+INFO   camadas topológicas (bloqueantes) — o que precisa existir primeiro:
+INFO     camada 1: D01-DOC-DDE-001, D06-DOC-EGC-001, D09-DOC-DEB-001, D11-DOC-DSI-001, D17-DOC-PEP-001
+INFO     camada 2: D01-DOC-MNE-001, D01-DOC-MRE-001, D01-DOC-TAP-001, D02-DOC-DGRC-001, D04-DOC-PPC-001, D06-DOC-RMI-001, D20-DOC-PPR-001, D22-DOC-DRL-001
+INFO     camada 3: D02-DOC-MRC-001, D03-DOC-MFO-001, D05-DOC-EPGD-001, D07-DOC-PEX-001, D08-DOC-MOP-001, D09-DOC-PPE-001, D13-DOC-DRM-001, D15-DOC-PASC-001
+INFO     camada 4: D02-DOC-PPT-001, D03-DOC-PFO-001, D05-DOC-DCM-001, D08-DOC-RUN-001, D10-DOC-DRP-001
+INFO     camada 5: D11-DOC-EEP-001, D14-DOC-PCV-001, D21-DOC-PWB-001
+INFO     camada 6: D10-DOC-PRD-001
+INFO     camada 7: D12-DOC-ETE-001
+INFO     camada 8: D07-DOC-PIM-001, D18-DOC-PCE-001, D23-DOC-PBL-001
+INFO     camada 9: D13-DOC-GTM-001
+INFO     camada 10: D19-DOC-PAC-001
+INFO     camada 11: D16-DOC-PEM-001
+INFO     F1: 73 campos
+INFO     F2: 124 campos
+INFO     F3: 67 campos
+INFO     F4: 51 campos
+INFO     F5: 71 campos
+INFO     F6: 113 campos
+INFO     F7: 0 campos
+INFO     F8: 120 campos
+INFO     F9: 120 campos
+INFO     F10: 70 campos
+INFO     F11: 71 campos
+INFO     F12: 105 campos
+INFO     F13: 101 campos
+INFO     F14: 39 campos
+INFO   cobertura de campos: 1125/1125
+AVISO  DEP-010: PROPOSED exige validação humana
+AVISO  DEP-013: PROPOSED exige validação humana
+AVISO  DEP-019: PROPOSED exige validação humana
+AVISO  DEP-031: PROPOSED exige validação humana
+AVISO  DEP-048: PROPOSED exige validação humana
+AVISO  DEP-078: PROPOSED exige validação humana
+AVISO  DEP-080: PROPOSED exige validação humana
+AVISO  GAP: aba obrigatória ausente no control plane — README_MASTER_INDEX_EXECUTAR
+AVISO  GAP: domínio de valores de 'required_status' não definido pelas linhas existentes de 16_REG
+AVISO  GAP: domínio de valores de 'status' não definido pelas linhas existentes de 16_REG
+AVISO  GAP: domínio de valores de 'relation' não definido pelas linhas existentes de 16_REG
+AVISO  ciclo com dependência informativa: D01-DOC-MNE-001 → D01-DOC-MRE-001 → D18-DOC-PCE-001 → D07-DOC-PIM-001 → D13-DOC-GTM-001 → D14-DOC-PCV-001 → D03-DOC-PFO-001 → D03-DOC-MFO-001 → D01-DOC-MNE-001
+AVISO  ciclo com dependência informativa: D03-DOC-PFO-001 → D03-DOC-MFO-001 → D03-DOC-PFO-001
+AVISO  ciclo com dependência informativa: D04-DOC-PPC-001 → D07-DOC-PEX-001 → D04-DOC-PPC-001
+AVISO  ciclo com dependência informativa: D07-DOC-PIM-001 → D13-DOC-GTM-001 → D14-DOC-PCV-001 → D03-DOC-PFO-001 → D04-DOC-PPC-001 → D07-DOC-PEX-001 → D07-DOC-PIM-001
+AVISO  ciclo com dependência informativa: D13-DOC-GTM-001 → D14-DOC-PCV-001 → D03-DOC-PFO-001 → D04-DOC-PPC-001 → D08-DOC-MOP-001 → D15-DOC-PASC-001 → D13-DOC-GTM-001
+AVISO  ciclo com dependência informativa: D13-DOC-GTM-001 → D14-DOC-PCV-001 → D03-DOC-PFO-001 → D13-DOC-GTM-001
+AVISO  ciclo com dependência informativa: D14-DOC-PCV-001 → D03-DOC-PFO-001 → D14-DOC-PCV-001
+AVISO  ciclo com dependência informativa: D10-DOC-DRP-001 → D11-DOC-EEP-001 → D10-DOC-DRP-001
+AVISO  ciclo com dependência informativa: D02-DOC-DGRC-001 → D05-DOC-EPGD-001 → D02-DOC-DGRC-001
+
+Resultado: 112 dependência(s); 0 erro(s), 20 aviso(s)
