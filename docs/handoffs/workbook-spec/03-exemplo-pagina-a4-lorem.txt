@@ -1,0 +1,190 @@
+┌──────────────────────────────────────────────────────────────────────────────┐
+│ WORKBOOK OPERACIONAL · LANÇAMENTO DO BLOG                         PÁG. 07   │
+├──────────────────────────────────────────────────────────────────────────────┤
+│ EPIC      EPIC-01 · Lançamento do Blog                                     │
+│ CICLO     C01 · Lorem ipsum dolor                                           │
+│ SPRINT    S01                                                               │
+│ SEMANA    W01                                                               │
+│ DATA      28/09/2026 · SEGUNDA-FEIRA                                       │
+├──────────────────────────────────────────────────────────────────────────────┤
+│ OBJETIVO DO DIA                                                             │
+│ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod      │
+│ tempor incididunt ut labore et dolore magna aliqua.                         │
+│                                                                              │
+│ ENTREGA PRINCIPAL                                                           │
+│ Lorem ipsum dolor sit amet — pacote diário validado e registrado.           │
+│                                                                              │
+│ ENTRADA       PLANNED                                                       │
+│ SAÍDA         STRUCTURED                                                    │
+│ GATE          G-LOREM-01                                                    │
+│ DEPENDÊNCIA   TASK-000                                                      │
+└──────────────────────────────────────────────────────────────────────────────┘
+┌──────────────────────────────────────────────────────────────────────────────┐
+│ 01 · ENGENHARIA                                                     [  ]     │
+├──────────────────────────────────────────────────────────────────────────────┤
+│ ID          ENG-001                                                         │
+│ ISSUE       #000                                                            │
+│ ÁREA        Design / estrutura                                              │
+│                                                                              │
+│ AÇÃO                                                                         │
+│ Organizar e versionar lorem ipsum dolor sit amet.                            │
+│                                                                              │
+│ INPUT                                                                        │
+│ • /local/lorem/design/                                                      │
+│ • tokens.yaml                                                               │
+│ • logo.svg                                                                  │
+│                                                                              │
+│ PASSOS                                                                       │
+│ [ ] 1. Conferir arquivos de origem                                           │
+│ [ ] 2. Validar nomenclatura                                                  │
+│ [ ] 3. Organizar estrutura                                                   │
+│ [ ] 4. Gerar pacote quando necessário                                       │
+│ [ ] 5. Subir para o destino                                                  │
+│ [ ] 6. Registrar evidência                                                   │
+│                                                                              │
+│ ARTEFATO                                                                     │
+│ design-system-lorem.zip                                                      │
+│                                                                              │
+│ DESTINO                                                                      │
+│ repo: executar-23/Copiloto-ops                                               │
+│ path: packages/design-system/lorem/                                          │
+│                                                                              │
+│ DEFINITION OF DONE                                                           │
+│ [ ] Estrutura completa                                                       │
+│ [ ] Arquivos nomeados                                                        │
+│ [ ] Destino validado                                                         │
+│ [ ] Evidência registrada                                                     │
+│                                                                              │
+│ EVIDÊNCIA                                                                    │
+│ commit / arquivo / URL: _________________________________________________    │
+│                                                                              │
+│ DESBLOQUEIA                                                                  │
+│ ENG-002 · Lorem ipsum dolor                                                  │
+└──────────────────────────────────────────────────────────────────────────────┘
+┌──────────────────────────────────────────────────────────────────────────────┐
+│ 02 · EDITORIAL                                                      [  ]     │
+├──────────────────────────────────────────────────────────────────────────────┤
+│ ID          EDT-001                                                         │
+│ ISSUE       #000                                                            │
+│ PEÇA        Artigo Lorem Ipsum                                               │
+│                                                                              │
+│ OBJETIVO                                                                     │
+│ Lorem ipsum dolor sit amet, consectetur adipiscing elit.                     │
+│                                                                              │
+│ INPUT                                                                        │
+│ • research-lorem.md                                                          │
+│ • outline-lorem.md                                                           │
+│ • fontes/                                                                    │
+│                                                                              │
+│ EXECUTAR                                                                     │
+│ [ ] Revisar estrutura                                                        │
+│ [ ] Redigir peça-mãe                                                        │
+│ [ ] Revisar argumentos                                                       │
+│ [ ] Identificar derivados                                                    │
+│ [ ] Definir infográficos                                                     │
+│                                                                              │
+│ ARQUIVOS PRODUZIDOS                                                          │
+│ 01. artigo-lorem.md                                                          │
+│ 02. infographic-01-lorem.md                                                  │
+│ 03. derivados-lorem.yaml                                                     │
+│                                                                              │
+│ DESTINO                                                                      │
+│ content/articles/lorem/                                                      │
+│                                                                              │
+│ DEFINITION OF DONE                                                           │
+│ [ ] Texto completo                                                           │
+│ [ ] Revisão concluída                                                        │
+│ [ ] Derivados identificados                                                  │
+│ [ ] Arquivos salvos                                                          │
+│ [ ] Evidência registrada                                                     │
+│                                                                              │
+│ DESBLOQUEIA                                                                  │
+│ EDT-002 · Produção dos derivados                                             │
+└──────────────────────────────────────────────────────────────────────────────┘
+┌──────────────────────────────────────────────────────────────────────────────┐
+│ 03 · STUDIOS                                                        [  ]     │
+├──────────────────────────────────────────────────────────────────────────────┤
+│ ID          STD-001                                                         │
+│ ISSUE       #000                                                            │
+│                                                                              │
+│ OBJETIVO                                                                     │
+│ Produzir lorem ipsum visual a partir do material editorial aprovado.         │
+│                                                                              │
+│ INPUT APROVADO                                                               │
+│ artigo-lorem.md                                                              │
+│                                                                              │
+│ PRODUZIR                                                                     │
+│ [ ] Infográfico 01                                                           │
+│ [ ] Card visual 01                                                           │
+│ [ ] Thumbnail 01                                                             │
+│                                                                              │
+│ EXPORTAR                                                                     │
+│ PNG / SVG / WEBP                                                             │
+│                                                                              │
+│ SALVAR LOCAL                                                                 │
+│ /studio/lorem/2026-09-28/                                                    │
+│                                                                              │
+│ SUBIR PARA                                                                   │
+│ assets/editorial/lorem/                                                      │
+│                                                                              │
+│ DEFINITION OF DONE                                                           │
+│ [ ] Assets exportados                                                        │
+│ [ ] Nomes corretos                                                           │
+│ [ ] Arquivos no destino                                                      │
+│ [ ] Evidência registrada                                                     │
+│                                                                              │
+│ DESBLOQUEIA                                                                  │
+│ PUB-001 · Lorem ipsum publicação                                             │
+└──────────────────────────────────────────────────────────────────────────────┘
+┌──────────────────────────────────────────────────────────────────────────────┐
+│ FECHAMENTO DO DIA                                                           │
+├──────────────────────────────────────────────────────────────────────────────┤
+│ [ ] Engenharia concluída                                                     │
+│ [ ] Editorial concluído                                                      │
+│ [ ] Studios concluído                                                        │
+│ [ ] Arquivos salvos                                                          │
+│ [ ] Arquivos enviados                                                        │
+│ [ ] Evidências registradas                                                   │
+│ [ ] Gate verificado                                                          │
+│ [ ] Amanhã preparado                                                         │
+│                                                                              │
+│ FEITO                                                                        │
+│ __________________________________________________________________________   │
+│ __________________________________________________________________________   │
+│                                                                              │
+│ EVIDÊNCIA                                                                    │
+│ __________________________________________________________________________   │
+│                                                                              │
+│ BLOQUEIO                                                                     │
+│ __________________________________________________________________________   │
+│                                                                              │
+│ OBSERVAÇÃO                                                                   │
+│ __________________________________________________________________________   │
+│                                                                              │
+│ AMANHÃ COMEÇA COM                                                            │
+│ __________________________________________________________________________   │
+│                                                                              │
+│ CHECK FINAL     [  ]                    HORA: ____________________________     │
+└──────────────────────────────────────────────────────────────────────────────┘
+
+A unidade central do bundle fica, portanto:
+
+WORKBOOK
+   ↓
+EPIC
+   ↓
+CICLO / SPRINT
+   ↓
+SEMANA
+   ↓
+PÁGINA A4 / DIA
+   ├── WF-ENG
+   ├── WF-EDITORIAL
+   ├── WF-STUDIOS
+   └── FECHAMENTO
+          ↓
+       EVIDÊNCIA
+          ↓
+         GATE
+          ↓
+    PRÓXIMO DIA

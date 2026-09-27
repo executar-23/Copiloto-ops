@@ -1,0 +1,241 @@
+schema_version: "1.0.0"
+bundle_type: "EXECUTAR_WORKBOOK_BUNDLE"
+workbook:
+  id: "WB-BLOG-001"
+  title: "Workbook Operacional — Lançamento do Blog"
+  mode: "physical_offline"
+  language: "pt-BR"
+  print:
+    page_size: "A4"
+    orientation: "portrait"
+    one_day_per_page: true
+    duplex: false
+ecosystem:
+  title: "Ecossistema EXECUTAR"
+  purpose: "Contexto estrutural; não é backlog do Epic atual."
+  nodes: []
+  relations: []
+epic:
+  id: "EPIC-01"
+  title: "Lançamento do Blog"
+  objective: "A_DEFINIR"
+  definition_of_done: []
+  deliverables: []
+  gates: []
+  risks: []
+roadmap:
+  working_backwards: true
+  value_chain:
+    - order: 1
+      stage: "INPUT"
+      description: "Ativos existentes e fontes"
+    - order: 2
+      stage: "TRABALHO"
+      description: "Execução da tarefa"
+    - order: 3
+      stage: "ARTEFATO"
+      description: "Saída concreta"
+    - order: 4
+      stage: "EVIDENCIA"
+      description: "Prova verificável"
+    - order: 5
+      stage: "GATE"
+      description: "Critério de passagem"
+    - order: 6
+      stage: "PROXIMA_ACAO"
+      description: "Trabalho desbloqueado"
+  cycles: []
+cycles:
+  - id: "C01"
+    title: "A_DEFINIR"
+    sprint: "A_DEFINIR"
+    objective: "A_DEFINIR"
+    entry_conditions: []
+    exit_conditions: []
+    gate: "A_DEFINIR"
+    issues: []
+    weeks: []
+weeks:
+  - id: "W01"
+    cycle_id: "C01"
+    objective: "A_DEFINIR"
+    dates:
+      start: "AAAA-MM-DD"
+      end: "AAAA-MM-DD"
+    daily_page_ids: []
+daily_pages:
+  - page_id: "DAY-001"
+    date: "AAAA-MM-DD"
+    weekday: "A_DEFINIR"
+    epic_id: "EPIC-01"
+    cycle_id: "C01"
+    sprint_id: "A_DEFINIR"
+    week_id: "W01"
+    page_number: 1
+    objective_of_day: "A_DEFINIR"
+    primary_delivery: "A_DEFINIR"
+    entry_state: "A_DEFINIR"
+    expected_exit_state: "A_DEFINIR"
+    gate_or_milestone: "A_DEFINIR"
+    critical_dependency: "A_DEFINIR"
+    workflows:
+      - order: 1
+        id: "WF-ENG"
+        name: "Engenharia"
+        tasks: []
+      - order: 2
+        id: "WF-EDITORIAL"
+        name: "Editorial"
+        tasks: []
+      - order: 3
+        id: "WF-STUDIOS"
+        name: "Studios"
+        tasks: []
+    close_day:
+      checklist:
+        - "entregaveis_concluidos"
+        - "arquivos_salvos"
+        - "arquivos_enviados_ao_destino"
+        - "evidencias_registradas"
+        - "gates_verificados"
+        - "pendencias_registradas"
+        - "bloqueios_registrados"
+        - "amanha_preparado"
+      done: ""
+      evidence: ""
+      blockers: ""
+      notes: ""
+      tomorrow_starts_with: ""
+      final_check: false
+task_contract:
+  required:
+    - id
+    - epic_id
+    - cycle_id
+    - workflow_id
+    - area
+    - title
+    - objective
+    - inputs
+    - dependencies
+    - steps
+    - definition_of_done
+    - artifact
+    - destination
+    - evidence
+    - state
+    - unlocks
+  fields:
+    id:
+      type: "string"
+      rule: "Preservar ID canônico existente; não inventar quando houver fonte."
+    issue_ref:
+      type:
+        - "string"
+        - "null"
+    sub_issue_ref:
+      type:
+        - "string"
+        - "null"
+    epic_id:
+      type: "string"
+    cycle_id:
+      type: "string"
+    workflow_id:
+      enum:
+        - "WF-ENG"
+        - "WF-EDITORIAL"
+        - "WF-STUDIOS"
+    area:
+      type: "string"
+    title:
+      type: "string"
+    objective:
+      type: "string"
+    inputs:
+      type: "array"
+    origin:
+      type: "array"
+    dependencies:
+      type: "array"
+    steps:
+      type: "array"
+    definition_of_done:
+      type: "array"
+    artifact:
+      type: "object"
+      fields:
+        description: "string"
+        filename: "string"
+        format: "string"
+        package_as_zip: "boolean"
+    destination:
+      type: "object"
+      fields:
+        repository: "string"
+        path: "string"
+    evidence:
+      type: "array"
+    gate:
+      type:
+        - "string"
+        - "null"
+      fallback: "A_DEFINIR"
+    approval:
+      enum:
+        - "pendente"
+        - "aprovado"
+        - "A_DEFINIR"
+      default: "pendente"
+    state:
+      enum:
+        - "PLANNED"
+        - "STRUCTURED"
+        - "IMPLEMENTED"
+        - "PRODUCED"
+        - "VERIFIED"
+        - "BLOCKED"
+        - "A_DEFINIR"
+    unlocks:
+      type: "array"
+    notes:
+      type: "string"
+evidence_index:
+  entries:
+    - task_id: "A_DEFINIR"
+      issue_ref: "A_DEFINIR"
+      artifact: "A_DEFINIR"
+      evidence_type: "A_DEFINIR"
+      evidence_ref: "A_DEFINIR"
+      gate: "A_DEFINIR"
+      state: "A_DEFINIR"
+file_destination_index:
+  entries:
+    - artifact_id: "A_DEFINIR"
+      source:
+        type: "local"
+        path: "A_DEFINIR"
+      destination:
+        repository: "A_DEFINIR"
+        path: "A_DEFINIR"
+      package_as_zip: false
+      evidence_ref: "A_DEFINIR"
+gaps:
+  marker: "A_DEFINIR"
+  entries:
+    - id: "GAP-001"
+      subject: "A_DEFINIR"
+      blocks: []
+      decision_required: true
+validation:
+  rules:
+    - "Cada dia ocupa exatamente uma pagina A4."
+    - "Cada tarefa possui resultado observavel."
+    - "Cada tarefa possui Definition of Done."
+    - "Cada artefato possui destino."
+    - "Cada conclusao possui evidencia."
+    - "Cada dependencia esta explicita."
+    - "Toda tarefa declara o que desbloqueia."
+    - "Nao criar trabalho apenas para preencher o dia."
+    - "Preservar IDs e planejamento existentes."
+    - "Nao promover aprovacao humana por inferencia."
