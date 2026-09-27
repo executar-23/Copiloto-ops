@@ -160,7 +160,7 @@ Use /productivity:update to keep things current (add --comprehensive for a deep 
 
 ## Integração executar-cop
 _Seção acrescentada por executar-23 em 2026-09-27. O restante deste arquivo é conteúdo original da Anthropic (knowledge-work-plugins), sob licença Apache-2.0; ver `../../THIRD_PARTY_NOTICES.md`._
-- **ID verbal:** sem ID verbal próprio: é a preparação exigida por CV-ATUAL-001 e CV-ATUAL-002. Nó `PROD-START` em `../../references/grafo-dependencias.json` (camada 1).
+- **ID verbal:** CV-INICIO-001 (`/iniciar`). Nó `PROD-START` em `../../references/grafo-dependencias.json` (camada 1).
 - **Pré-voo de dependências:** aplicar `../../references/nucleo-dependencias.md` antes de agir; usa o template da skill `task-management` (DEP-COP-004, documentado no corpo desta skill). Feche com `Dependências de entrada → Saída → Gate`.
 - **Saída visual** (gráfico, board, dashboard): aplicar `../../assets/design-tokens/calendario-light-mode.md`, com vermelho só para hoje, prioridade ou item atual.
 - **Idioma:** toda saída visível sai em português do Brasil, mesmo que as instruções desta skill estejam em inglês.

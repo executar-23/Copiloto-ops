@@ -53,6 +53,8 @@ A documentação oficial do GitHub orienta configurar auto-add em **Project → 
 - PF-24 é a "reconciliação cruzada depends_on/blocks entre áreas", registrada na NA-03 da própria planilha.
 - As skills da conta `copiloto-executar` e `executar-mapa-os` continuam como dependências externas, com fonte fora deste repositório.
 - As skills de `operations`, `productivity` e `product-management` foram incorporadas ao plugin (ADR-0003, emenda b; Apache-2.0).
+- **v0.3.0 (emenda c): cobertura total.** São 40 IDs verbais e 40 commands; 30 skills; 32 nós no grafo. Guia de uso: `docs/USO-EXECUTAR-COP.md`.
+- `docs/fontes/` contém o CMD-COP-001 (docx). A planilha `EXECUTAR_HUB_Control_Plane_v2.xlsx` **não** foi versionada: o envio foi bloqueado por conter dado pessoal de terceiro (UAR-03), e a decisão fica com o usuário.
 - Aprovação da Issue #24, Gate (`gate:tbd`) e owner (`A_DEFINIR`) dependem de decisão humana.
 
 ## Ainda não configurado/verificado

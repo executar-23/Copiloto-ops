@@ -9,7 +9,9 @@ Operação do GTM-Blog em duas plataformas: **Notion como banco de informações
 - [Árvore real](docs/ARVORE-REPOSITORIO.md) e [árvore-alvo](docs/ARVORE-PROJETO-ALVO.txt).
 - [Knowledge base local do GTM-Blog](projects/GTM-Blog/knowledge/README.md).
 - [Runbooks](Runbooks/README.md) — execução operacional repetível.
-- [Plugin executar-cop](plugins/executar-cop/README.md) — Orquestrador CMD-COP, núcleo de dependências e cadeia proprietária ([ADR-0003](docs/ADR-0003-PLUGIN-EXECUTAR-COP.md)).
+- [Plugin executar-cop](plugins/executar-cop/README.md) — Orquestrador CMD-COP com 40 comandos/IDs verbais, núcleo de dependências e cadeia proprietária ([ADR-0003](docs/ADR-0003-PLUGIN-EXECUTAR-COP.md)). **Como usar:** [docs/USO-EXECUTAR-COP.md](docs/USO-EXECUTAR-COP.md).
+- [PF-24 — dependências do EXECUTAR HUB](projects/EXECUTAR-HUB/control-plane/PF-24/ENTREGA.md) — 16_REG, mapa e fases de preenchimento.
+- [Fontes versionadas](docs/fontes/) — CMD-COP-001 (docx).
 - [Prompt de configuração](prompts/01-bootstrap-copiloto-ops.md), [orientação de agentes](prompts/02-agentes.md) e [modelo de tarefa](templates/tarefa.md).
 
 ## Execução única de 2026-09-27

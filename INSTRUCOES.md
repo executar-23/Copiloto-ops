@@ -14,5 +14,8 @@ Identifique objetivo, aceite e dados necessários. Consulte o [Runner](https://a
 5. Para arquivos deste repositório, siga a regra 9 de [AGENTS.md](AGENTS.md): sync → inspect → change → validate → commit → sync diretamente em main. O racional está em [ADR-0001](docs/ADR-0001-AGENTES-DIRETO-MAIN.md). Inspecione alterações concorrentes, execute validações aplicáveis, revise diff, não force-push e pare diante de conflito sem resolução inequívoca. Observe CI e corrija/reverta regressões introduzidas.
 6. Valide resultado nas duas plataformas. Links não sincronizam estado nem transferem permissões.
 
+## Plugin executar-cop
+Para operar pelo Claude Code ou pelo claude.ai, instale o plugin `executar-cop@copiloto-ops` e siga [docs/USO-EXECUTAR-COP.md](docs/USO-EXECUTAR-COP.md). Todo comando faz um pré-voo de dependências antes de agir. Componentes novos entram primeiro no índice `plugins/executar-cop/references/cmd-cop-index.md`.
+
 ## Saída
 Informe páginas consultadas, Issue/commit, validações, pendências e próxima ação única. Não declare como criados Project, labels, milestones ou Epics que ainda são propostas.

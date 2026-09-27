@@ -370,17 +370,21 @@ plugins/executar-cop/
 ├── .claude-plugin/plugin.json
 ├── README.md
 ├── agents/                               # orquestrador-cop, dominio-operacoes, dominio-produto, cadeia-de-valor-proprietaria
-├── commands/                             # 28 slashes (um por ID verbal CV-XXX-NNN)
+├── commands/                             # 40 slashes (um por ID verbal CV-XXX-NNN)
+├── CONNECTORS.md, THIRD_PARTY_NOTICES.md, LICENSE-APACHE-2.0
 ├── references/                           # cmd-cop-index.md, nucleo-dependencias.md, grafo-dependencias(.schema).json
 ├── assets/design-tokens/                 # calendario-light-mode.md + PNG
 ├── skills/
 │   ├── executar-dependency-architect/
 │   ├── executar-arvore-roadmap/
 │   ├── executar-mergulhe/                # + assets/arvore-visual-v1.0/
-│   └── obsidian-editorial-pipeline/
+│   ├── obsidian-editorial-pipeline/
+│   └── … 26 outras (Anthropic Apache-2.0 + plan-mode, product-code-development, execution-toolkit)
 ├── scripts/validar_plugin.py
 └── evals/                                # casos de `claude plugin eval`
 ```
+
+Também foram acrescentados: `docs/USO-EXECUTAR-COP.md`, `docs/fontes/` (CMD-COP-001.docx) e `projects/EXECUTAR-HUB/control-plane/PF-24/`.
 
 Os agentes do plugin (`plugins/executar-cop/agents/`) não substituem o scaffold `agents/a01…a08` nem `manager-orchestrator/`.
 

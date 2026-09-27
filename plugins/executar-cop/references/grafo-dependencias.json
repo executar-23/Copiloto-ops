@@ -1,7 +1,7 @@
 {
   "meta": {
     "fluxo_de_valor": "PEM-PIPELINE-PROPRIETARIO",
-    "versao": "0.2.0",
+    "versao": "0.3.0",
     "fonte": [
       "docs/architecture/HANDOFF-AGENTES-001.md §6 (cadeia proprietária)",
       "docs/ADR-0003-PLUGIN-EXECUTAR-COP.md",
@@ -63,7 +63,9 @@
       "tipo": "skill-plugin",
       "camada": 1,
       "modulo": "executar-cop:task-management",
-      "cv_ids": [],
+      "cv_ids": [
+        "CV-TAREFAS-001"
+      ],
       "depende_de": [],
       "desbloqueia": [
         "PROD-START"
@@ -78,7 +80,9 @@
       "tipo": "skill-plugin",
       "camada": 1,
       "modulo": "executar-cop:start",
-      "cv_ids": [],
+      "cv_ids": [
+        "CV-INICIO-001"
+      ],
       "depende_de": [
         "PROD-TASK-MANAGEMENT"
       ],
@@ -374,6 +378,156 @@
       "depende_de": [
         "ARVORE-VISUAL"
       ],
+      "desbloqueia": [],
+      "porta": null,
+      "estado": "aberta",
+      "saida_visual": true
+    },
+    {
+      "id": "PM-COMPETITIVE-BRIEF",
+      "titulo": "Criar análise competitiva de concorrentes ou área de funcionalidade",
+      "tipo": "skill-plugin",
+      "camada": 2,
+      "modulo": "executar-cop:competitive-brief",
+      "cv_ids": [
+        "CV-CONCOR-001"
+      ],
+      "depende_de": [],
+      "desbloqueia": [],
+      "porta": null,
+      "estado": "aberta",
+      "saida_visual": true
+    },
+    {
+      "id": "PM-METRICS-REVIEW",
+      "titulo": "Revisar métricas de produto com tendência e ações",
+      "tipo": "skill-plugin",
+      "camada": 2,
+      "modulo": "executar-cop:metrics-review",
+      "cv_ids": [
+        "CV-METRICA-001"
+      ],
+      "depende_de": [],
+      "desbloqueia": [],
+      "porta": null,
+      "estado": "aberta",
+      "saida_visual": true
+    },
+    {
+      "id": "PM-PRODUCT-BRAINSTORMING",
+      "titulo": "Explorar ideia, problema ou questão de produto como parceiro de pensamento",
+      "tipo": "skill-plugin",
+      "camada": 2,
+      "modulo": "executar-cop:product-brainstorming",
+      "cv_ids": [
+        "CV-IDEIA-001"
+      ],
+      "depende_de": [],
+      "desbloqueia": [],
+      "porta": null,
+      "estado": "aberta",
+      "saida_visual": false
+    },
+    {
+      "id": "PM-SPRINT-PLANNING",
+      "titulo": "Planejar sprint: escopo, capacidade, metas e carryover",
+      "tipo": "skill-plugin",
+      "camada": 2,
+      "modulo": "executar-cop:sprint-planning",
+      "cv_ids": [
+        "CV-SPRINT-001"
+      ],
+      "depende_de": [],
+      "desbloqueia": [],
+      "porta": null,
+      "estado": "aberta",
+      "saida_visual": true
+    },
+    {
+      "id": "PM-STAKEHOLDER-UPDATE",
+      "titulo": "Gerar atualização para stakeholders por público e cadência",
+      "tipo": "skill-plugin",
+      "camada": 2,
+      "modulo": "executar-cop:stakeholder-update",
+      "cv_ids": [
+        "CV-STAKE-001"
+      ],
+      "depende_de": [],
+      "desbloqueia": [],
+      "porta": null,
+      "estado": "aberta",
+      "saida_visual": false
+    },
+    {
+      "id": "SETUP-PLUGIN-CUSTOMIZER",
+      "titulo": "Personalizar plugin para as ferramentas e fluxos da organização",
+      "tipo": "skill-plugin",
+      "camada": 1,
+      "modulo": "executar-cop:cowork-plugin-customizer",
+      "cv_ids": [
+        "CV-PLUGIN-001"
+      ],
+      "depende_de": [],
+      "desbloqueia": [],
+      "porta": null,
+      "estado": "aberta",
+      "saida_visual": false
+    },
+    {
+      "id": "SETUP-CREATE-PLUGIN",
+      "titulo": "Criar novo plugin do zero com estrutura válida",
+      "tipo": "skill-plugin",
+      "camada": 1,
+      "modulo": "executar-cop:create-cowork-plugin",
+      "cv_ids": [
+        "CV-PLUGIN-002"
+      ],
+      "depende_de": [],
+      "desbloqueia": [],
+      "porta": null,
+      "estado": "aberta",
+      "saida_visual": false
+    },
+    {
+      "id": "EXEC-PLAN-MODE",
+      "titulo": "Transformar prompt bruto em plano de execução rastreável antes de implementar",
+      "tipo": "skill-plugin",
+      "camada": 1,
+      "modulo": "executar-cop:executar-plan-mode",
+      "cv_ids": [
+        "CV-PLANO-001"
+      ],
+      "depende_de": [],
+      "desbloqueia": [],
+      "porta": null,
+      "estado": "aberta",
+      "saida_visual": false
+    },
+    {
+      "id": "EXEC-PRODUCT-CODE-DEV",
+      "titulo": "Conduzir produto → código: discovery, arquitetura, fatia vertical, testes e deploy",
+      "tipo": "skill-plugin",
+      "camada": 2,
+      "modulo": "executar-cop:product-code-development",
+      "cv_ids": [
+        "CV-PRODEV-001"
+      ],
+      "depende_de": [],
+      "desbloqueia": [],
+      "porta": null,
+      "estado": "aberta",
+      "saida_visual": false
+    },
+    {
+      "id": "EXEC-TOOLKIT",
+      "titulo": "Orquestrar workflow multiagente, imagem existente ou redação técnica",
+      "tipo": "skill-plugin",
+      "camada": 1,
+      "modulo": "executar-cop:execution-toolkit",
+      "cv_ids": [
+        "CV-TOOLKIT-001"
+      ],
+      "depende_de": [],
       "desbloqueia": [],
       "porta": null,
       "estado": "aberta",

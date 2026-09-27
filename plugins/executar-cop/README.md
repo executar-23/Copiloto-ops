@@ -15,8 +15,9 @@ CAMADA 3 — Cadeia proprietária     executar-dependency-architect → executar
 |---|---|
 | Agentes | `orquestrador-cop` (entrada única), `dominio-operacoes`, `dominio-produto`, `cadeia-de-valor-proprietaria` |
 | Skills proprietárias (4) | `executar-dependency-architect`, `executar-arvore-roadmap`, `executar-mergulhe` (Árvore Visual), `obsidian-editorial-pipeline` v2.2 |
-| Skills incorporadas da Anthropic (16, Apache-2.0) | operações: `capacity-plan`, `change-request`, `process-doc`, `runbook`, `status-report`, `vendor-review`, `risk-assessment`, `compliance-tracking`, `process-optimization` · produtividade: `update`, `start`, `task-management`, `memory-management` (+ `skills/dashboard.html`) · produto: `roadmap-update`, `write-spec`, `synthesize-research`. Todas são `user-invocable: false`, e a interface do usuário são os commands CV. Ver `THIRD_PARTY_NOTICES.md` e `CONNECTORS.md` |
-| Commands | 28 slashes, um por ID verbal (lista em `references/cmd-cop-index.md`) |
+| Skills proprietárias de apoio (3) | `executar-plan-mode` (`/plano`), `product-code-development` (`/produto-codigo`), `execution-toolkit` (`/execucao`) |
+| Skills incorporadas da Anthropic (23, Apache-2.0) | operações: `capacity-plan`, `change-request`, `process-doc`, `runbook`, `status-report`, `vendor-review`, `risk-assessment`, `compliance-tracking`, `process-optimization` · produtividade: `update`, `start`, `task-management`, `memory-management` (+ `skills/dashboard.html`) · produto: `roadmap-update`, `write-spec`, `synthesize-research`, `competitive-brief`, `metrics-review`, `product-brainstorming`, `sprint-planning`, `stakeholder-update` · setup: `cowork-plugin-customizer`, `create-cowork-plugin`. Todas são `user-invocable: false`, e a interface do usuário são os commands CV. Ver `THIRD_PARTY_NOTICES.md` e `CONNECTORS.md` |
+| Commands | 40 slashes, um por ID verbal. Todo componente tem ID, nada fica de fora (lista em `references/cmd-cop-index.md`) |
 | Referências | `cmd-cop-index.md` (índice único), `nucleo-dependencias.md` (contrato transversal), `grafo-dependencias.schema.json` + `grafo-dependencias.json` |
 | Assets | `design-tokens/calendario-light-mode.md` + PNG de referência |
 | Validação | `scripts/validar_plugin.py`; testes em `skills/*/tests/` |

@@ -92,6 +92,6 @@ Ask before adding - don't auto-add without confirmation.
 
 ## Integração executar-cop
 _Seção acrescentada por executar-23 em 2026-09-27. O restante deste arquivo é conteúdo original da Anthropic (knowledge-work-plugins), sob licença Apache-2.0; ver `../../THIRD_PARTY_NOTICES.md`._
-- **ID verbal:** sem ID verbal próprio: define o formato de `TASKS.md` usado por `start` e `update`. Nó `PROD-TASK-MANAGEMENT` em `../../references/grafo-dependencias.json` (camada 1).
+- **ID verbal:** CV-TAREFAS-001 (`/tarefas`). Nó `PROD-TASK-MANAGEMENT` em `../../references/grafo-dependencias.json` (camada 1).
 - **Pré-voo de dependências:** aplicar `../../references/nucleo-dependencias.md` antes de agir; confira se `TASKS.md` existe antes de ler ou gravar. Feche com `Dependências de entrada → Saída → Gate`.
 - **Idioma:** toda saída visível sai em português do Brasil, mesmo que as instruções desta skill estejam em inglês.

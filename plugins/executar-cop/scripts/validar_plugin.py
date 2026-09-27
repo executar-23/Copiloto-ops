@@ -241,6 +241,8 @@ def checar_skills(raiz: Path, nos: dict[str, dict], r: Relatorio) -> None:
         if no is None:
             r.erro(f"skill: {nome_dir} sem nó no grafo")
             continue
+        if not no["cv_ids"]:
+            r.erro(f"skill: {nome_dir} sem ID verbal (cobertura total exigida)")
         if no["saida_visual"] and TOKEN not in corpo:
             r.erro(f"skill: {nome_dir} tem saída visual e não referencia {TOKEN}")
         if no["camada"] in (2, 3) and not BUSCA.search(corpo):

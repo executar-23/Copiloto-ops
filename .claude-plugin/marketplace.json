@@ -9,7 +9,7 @@
       "name": "executar-cop",
       "source": "./plugins/executar-cop",
       "description": "Orquestrador CMD-COP do EXECUTAR: IDs verbais + slash + sinônimos, núcleo transversal de dependências, cadeia proprietária (dependências → árvore → árvore visual → editorial Obsidian) e token visual do calendário. Saída em pt-BR.",
-      "version": "0.2.0",
+      "version": "0.3.0",
       "category": "productivity"
     }
   ]

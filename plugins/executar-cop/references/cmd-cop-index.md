@@ -103,6 +103,37 @@ Aliases de modo (IDs da própria skill `executar-arvore-roadmap`; resolvem para 
 - ARVORE-CSV-04 → /arvore csv.
 - ARVOREKIT → /arvore kit.
 
+
+## 3b. Extensão — cobertura total (2026-09-27, ADR-0003 emenda c)
+Nenhum componente do plugin fica sem ID verbal.
+
+- CV-CONCOR-001 — /concorrencia — criar análise competitiva de concorrentes ou área de funcionalidade.
+- CV-METRICA-001 — /metricas — revisar métricas de produto com tendência e ações.
+- CV-IDEIA-001 — /brainstorm — explorar ideia, problema ou questão de produto como parceiro de pensamento.
+- CV-SPRINT-001 — /sprint — planejar sprint: escopo, capacidade, metas e carryover.
+- CV-STAKE-001 — /stakeholders — gerar atualização para stakeholders por público e cadência.
+- CV-INICIO-001 — /iniciar — preparar TASKS.md, memória e dashboard de produtividade.
+- CV-TAREFAS-001 — /tarefas — consultar, adicionar ou concluir tarefas do TASKS.md.
+- CV-PLUGIN-001 — /personalizar-plugin — personalizar plugin para as ferramentas e fluxos da organização.
+- CV-PLUGIN-002 — /criar-plugin — criar novo plugin do zero com estrutura válida.
+- CV-PLANO-001 — /plano — transformar prompt bruto em plano de execução rastreável antes de implementar.
+- CV-PRODEV-001 — /produto-codigo — conduzir produto → código: discovery, arquitetura, fatia vertical, testes e deploy.
+- CV-TOOLKIT-001 — /execucao — orquestrar workflow multiagente, imagem existente ou redação técnica.
+
+Sinônimos:
+- CV-CONCOR-001: "Analisa os concorrentes"; "Como estamos contra o concorrente X?"; "Monta o battle card".
+- CV-METRICA-001: "Revisa as métricas do mês"; "Por que essa métrica caiu?"; "Monta o scorecard".
+- CV-IDEIA-001: "Vamos pensar juntos nessa ideia"; "Me ajuda a explorar esse problema"; "Desafia essa hipótese".
+- CV-SPRINT-001: "Planeja o próximo sprint"; "O que cabe nesse sprint?"; "Monta o plano de sprint".
+- CV-STAKE-001: "Escreve o update para a liderança"; "Comunica esse atraso aos stakeholders"; "Versão executiva do status".
+- CV-INICIO-001: "Inicializa o copiloto de tarefas"; "Prepara o sistema de produtividade"; "Abre o dashboard".
+- CV-TAREFAS-001: "Quais são minhas tarefas?"; "Adiciona essa tarefa"; "Marca como feita".
+- CV-PLUGIN-001: "Personaliza esse plugin"; "Ajusta os conectores do plugin"; "Adapta o plugin às nossas ferramentas".
+- CV-PLUGIN-002: "Cria um plugin novo"; "Scaffold de plugin"; "Quero montar um plugin".
+- CV-PLANO-001: "Planeja antes de executar"; "Transforma isso num plano"; "Modo plano".
+- CV-PRODEV-001: "Leva essa feature do produto ao código"; "Planeja a implementação dessa issue"; "Do PRD ao deploy".
+- CV-TOOLKIT-001: "Divide isso entre vários agentes"; "Processa essa imagem"; "Escreve o relatório técnico".
+
 ---
 
 ## 4. Roteamento (ID → módulo → nó do grafo)
@@ -138,6 +169,18 @@ Proveniência do mapeamento pelo modelo epistêmico (`nucleo-dependencias.md` §
 | CV-ARVORE-001 | /arvore | `executar-cop:executar-arvore-roadmap` | ARVORE-ROADMAP | DIRECT — handoff §6 | não | sim, se houver fato externo |
 | CV-VISUAL-001 | /arvore-visual | `executar-cop:executar-mergulhe` | ARVORE-VISUAL | DIRECT — handoff §6 | **sim** | sim, se houver fato externo |
 | CV-EDITORIAL-001 | /editorial | `executar-cop:obsidian-editorial-pipeline` | EDITORIAL-OBSIDIAN | DIRECT — handoff §6 | **sim** | **sim** (evidências e fontes) |
+| CV-CONCOR-001 | /concorrencia | `executar-cop:competitive-brief` | PM-COMPETITIVE-BRIEF | DIRECT — ID atribuído pelo usuário ("nada fica de fora"); módulo = a própria skill | **sim** | sim, obrigatória |
+| CV-METRICA-001 | /metricas | `executar-cop:metrics-review` | PM-METRICS-REVIEW | DIRECT — ID atribuído pelo usuário ("nada fica de fora"); módulo = a própria skill | **sim** | sim, obrigatória quando comparar com benchmark externo |
+| CV-IDEIA-001 | /brainstorm | `executar-cop:product-brainstorming` | PM-PRODUCT-BRAINSTORMING | DIRECT — ID atribuído pelo usuário ("nada fica de fora"); módulo = a própria skill | não | sim, obrigatória quando a discussão usar dado de mercado |
+| CV-SPRINT-001 | /sprint | `executar-cop:sprint-planning` | PM-SPRINT-PLANNING | DIRECT — ID atribuído pelo usuário ("nada fica de fora"); módulo = a própria skill | **sim** | sim, obrigatória só se usar benchmark externo de velocidade |
+| CV-STAKE-001 | /stakeholders | `executar-cop:stakeholder-update` | PM-STAKEHOLDER-UPDATE | DIRECT — ID atribuído pelo usuário ("nada fica de fora"); módulo = a própria skill | não | sim, obrigatória quando citar dado externo |
+| CV-INICIO-001 | /iniciar | `executar-cop:start` | PROD-START | DIRECT — ID atribuído pelo usuário ("nada fica de fora"); módulo = a própria skill | **sim** | não |
+| CV-TAREFAS-001 | /tarefas | `executar-cop:task-management` | PROD-TASK-MANAGEMENT | DIRECT — ID atribuído pelo usuário ("nada fica de fora"); módulo = a própria skill | não | não |
+| CV-PLUGIN-001 | /personalizar-plugin | `executar-cop:cowork-plugin-customizer` | SETUP-PLUGIN-CUSTOMIZER | DIRECT — ID atribuído pelo usuário ("nada fica de fora"); módulo = a própria skill | não | não |
+| CV-PLUGIN-002 | /criar-plugin | `executar-cop:create-cowork-plugin` | SETUP-CREATE-PLUGIN | DIRECT — ID atribuído pelo usuário ("nada fica de fora"); módulo = a própria skill | não | não |
+| CV-PLANO-001 | /plano | `executar-cop:executar-plan-mode` | EXEC-PLAN-MODE | DIRECT — ID atribuído pelo usuário ("nada fica de fora"); módulo = a própria skill | não | não |
+| CV-PRODEV-001 | /produto-codigo | `executar-cop:product-code-development` | EXEC-PRODUCT-CODE-DEV | DIRECT — ID atribuído pelo usuário ("nada fica de fora"); módulo = a própria skill | não | sim, obrigatória para documentação técnica e referências externas |
+| CV-TOOLKIT-001 | /execucao | `executar-cop:execution-toolkit` | EXEC-TOOLKIT | DIRECT — ID atribuído pelo usuário ("nada fica de fora"); módulo = a própria skill | **sim** | não |
 
 ## 5. Desambiguação (o Orquestrador pede a decisão mínima)
 - "mapa" sozinho → /mapa (sinônimo original). "Mapa de dependências" → /dependencias (parte 2). "Árvore" ou "ramos" → /arvore-visual se o pedido for visual, /arvore se for texto, zip, CSV ou vault.

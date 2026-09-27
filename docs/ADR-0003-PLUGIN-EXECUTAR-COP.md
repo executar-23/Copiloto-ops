@@ -53,3 +53,14 @@ O handoff previa o registro epistêmico de dependências apenas na skill `execut
   - `CONNECTORS.md` unificado.
 - **Consequência:** a consequência anterior sobre "plugins Anthropic como dependências externas" fica **substituída**. Continuam externas apenas as skills da conta `copiloto-executar` e `executar-mapa-os`.
 - **Grafo:** os nós agregados OPERATIONS, PRODUCTIVITY e PRODUCT-MANAGEMENT foram substituídos por um nó por skill.
+
+## Emenda c — 2026-09-27: cobertura total de IDs verbais
+**Decisão do usuário:** "todas devem ter índice verbal, nada fica de fora".
+- Foram incorporados e receberam ID os itens restantes do pacote:
+  - `competitive-brief`, `metrics-review`, `product-brainstorming` (+ comando `brainstorm`), `sprint-planning` e `stakeholder-update`;
+  - `cowork-plugin-customizer` e `create-cowork-plugin`;
+  - as skills proprietárias `executar-plan-mode`, `product-code-development` e `execution-toolkit` (EXECUTAR-TAREFAS).
+- `start` e `task-management` também ganharam ID: `/iniciar` e `/tarefas`.
+- Resultado: 40 IDs, 40 commands, 30 skills e 32 nós no grafo.
+- O validador passou a reprovar qualquer skill sem ID verbal.
+- `product-code-development` tinha `disable-model-invocation: true`, o que impediria a delegação. Foi trocado por `user-invocable: false`.
