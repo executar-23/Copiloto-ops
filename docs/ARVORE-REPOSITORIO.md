@@ -360,6 +360,30 @@ Copiloto-ops/
 └── README.md
 ```
 
+## Plugin executar-cop (2026-09-27, Issue #24)
+
+Estes caminhos foram adicionados depois do scaffold e ficam fora da árvore-alvo creator-led, conforme o [ADR-0003](ADR-0003-PLUGIN-EXECUTAR-COP.md):
+
+```text
+.claude-plugin/marketplace.json           # marketplace copiloto-ops
+plugins/executar-cop/
+├── .claude-plugin/plugin.json
+├── README.md
+├── agents/                               # orquestrador-cop, dominio-operacoes, dominio-produto, cadeia-de-valor-proprietaria
+├── commands/                             # 28 slashes (um por ID verbal CV-XXX-NNN)
+├── references/                           # cmd-cop-index.md, nucleo-dependencias.md, grafo-dependencias(.schema).json
+├── assets/design-tokens/                 # calendario-light-mode.md + PNG
+├── skills/
+│   ├── executar-dependency-architect/
+│   ├── executar-arvore-roadmap/
+│   ├── executar-mergulhe/                # + assets/arvore-visual-v1.0/
+│   └── obsidian-editorial-pipeline/
+├── scripts/validar_plugin.py
+└── evals/                                # casos de `claude plugin eval`
+```
+
+Os agentes do plugin (`plugins/executar-cop/agents/`) não substituem o scaffold `agents/a01…a08` nem `manager-orchestrator/`.
+
 ## Regra de leitura
 
 - **Árvore real:** arquivos e diretórios efetivamente versionados em `main`.
