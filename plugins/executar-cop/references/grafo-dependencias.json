@@ -1,0 +1,178 @@
+{
+  "meta": {
+    "fluxo_de_valor": "PEM-PIPELINE-PROPRIETARIO",
+    "versao": "0.1.0",
+    "fonte": [
+      "docs/architecture/HANDOFF-AGENTES-001.md §6 (cadeia proprietária)",
+      "docs/ADR-0003-PLUGIN-EXECUTAR-COP.md",
+      "plugins/executar-cop/references/cmd-cop-index.md §4 (roteamento)"
+    ],
+    "atualizado_em": "2026-09-27"
+  },
+  "nos": [
+    {
+      "id": "COPILOTO-EXECUTAR",
+      "titulo": "Rotina diária EXECUTAR (/bomdia, /agora, /estado, /fechardia, /replanejamento, /evidencia, /bloqueio)",
+      "tipo": "skill-conta",
+      "camada": 1,
+      "modulo": "copiloto-executar",
+      "cv_ids": ["CV-BOMDIA-001", "CV-AGORA-001", "CV-ESTADO-001", "CV-FECHAR-001", "CV-REPLAN-001", "CV-EVID-001", "CV-BLOQ-001"],
+      "depende_de": [],
+      "desbloqueia": [],
+      "porta": null,
+      "estado": "aberta",
+      "saida_visual": false,
+      "recurso_externo": {"tipo": "skill-conta", "referencia": "copiloto-executar (skill da conta claude.ai; fonte fora deste repositório)", "se_ausente": "bloqueado-externo"}
+    },
+    {
+      "id": "MAPA-OS",
+      "titulo": "Mapa-OS visual a partir da fonte canônica (/mapa)",
+      "tipo": "skill-conta",
+      "camada": 1,
+      "modulo": "executar-mapa-os",
+      "cv_ids": ["CV-MAPA-001"],
+      "depende_de": [],
+      "desbloqueia": [],
+      "porta": null,
+      "estado": "aberta",
+      "saida_visual": true,
+      "recurso_externo": {"tipo": "skill-conta", "referencia": "executar-mapa-os (skill da conta claude.ai; fonte fora deste repositório)", "se_ausente": "bloqueado-externo"}
+    },
+    {
+      "id": "PRODUCTIVITY",
+      "titulo": "Produtividade: sincronização de tarefas, contexto e memória",
+      "tipo": "plugin-externo",
+      "camada": 1,
+      "modulo": "productivity@knowledge-work-plugins",
+      "cv_ids": ["CV-ATUAL-001", "CV-ATUAL-002", "CV-CONTEXTO-001", "CV-MEMORIA-001"],
+      "depende_de": [],
+      "desbloqueia": [],
+      "porta": null,
+      "estado": "aberta",
+      "saida_visual": false,
+      "recurso_externo": {"tipo": "plugin", "referencia": "productivity@knowledge-work-plugins", "se_ausente": "bloqueado-externo"}
+    },
+    {
+      "id": "OPERATIONS",
+      "titulo": "Operações: capacidade, mudança, processo, procedimento, situação, fornecedor, risco, conformidade, otimização",
+      "tipo": "plugin-externo",
+      "camada": 2,
+      "modulo": "operations@knowledge-work-plugins",
+      "cv_ids": ["CV-CAP-001", "CV-MUD-001", "CV-PROC-001", "CV-POP-001", "CV-SIT-001", "CV-FORN-001", "CV-RISCO-001", "CV-CONF-001", "CV-OTIM-001"],
+      "depende_de": [],
+      "desbloqueia": [],
+      "porta": null,
+      "estado": "aberta",
+      "saida_visual": false,
+      "recurso_externo": {"tipo": "plugin", "referencia": "operations@knowledge-work-plugins", "se_ausente": "bloqueado-externo"}
+    },
+    {
+      "id": "PRODUCT-MANAGEMENT",
+      "titulo": "Produto: roadmap, spec e pesquisa com usuários",
+      "tipo": "plugin-externo",
+      "camada": 2,
+      "modulo": "product-management@knowledge-work-plugins",
+      "cv_ids": ["CV-ROADMAP-001", "CV-SPEC-001", "CV-PESQ-001"],
+      "depende_de": [],
+      "desbloqueia": [],
+      "porta": null,
+      "estado": "aberta",
+      "saida_visual": false,
+      "recurso_externo": {"tipo": "plugin", "referencia": "product-management@knowledge-work-plugins", "se_ausente": "bloqueado-externo"}
+    },
+    {
+      "id": "DEPENDENCY-ARCHITECT",
+      "titulo": "Reconstrução formal da rede de dependências (16_REG_Dependencias + Arquitetura de Preenchimento)",
+      "tipo": "skill-plugin",
+      "camada": 3,
+      "modulo": "executar-cop:executar-dependency-architect",
+      "cv_ids": ["CV-DEPEND-001"],
+      "depende_de": [],
+      "desbloqueia": ["ARVORE-ROADMAP"],
+      "porta": null,
+      "estado": "aberta",
+      "saida_visual": false,
+      "lacunas": [
+        "GAP: EXECUTAR_HUB_Control_Plane_v2.xlsx não recebido; validação com dados reais pendente (testes usam fixture FICTÍCIA).",
+        "GAP: definição do PF-24 (reconciliação cruzada) não está nas fontes recebidas."
+      ]
+    },
+    {
+      "id": "ARVORE-ROADMAP",
+      "titulo": "Planejamento canônico (estrutura.json)",
+      "tipo": "skill-plugin",
+      "camada": 3,
+      "modulo": "executar-cop:executar-arvore-roadmap",
+      "cv_ids": ["CV-ARVORE-001"],
+      "depende_de": ["DEPENDENCY-ARCHITECT"],
+      "desbloqueia": ["ARVORE-VISUAL"],
+      "porta": null,
+      "estado": "aberta",
+      "saida_visual": false
+    },
+    {
+      "id": "ARVORE-VISUAL",
+      "titulo": "Visualização navegável (Executar · Árvore Visual / Mergulhe)",
+      "tipo": "skill-plugin",
+      "camada": 3,
+      "modulo": "executar-cop:executar-mergulhe",
+      "cv_ids": ["CV-VISUAL-001"],
+      "depende_de": ["ARVORE-ROADMAP"],
+      "desbloqueia": ["EDITORIAL-OBSIDIAN"],
+      "porta": null,
+      "estado": "aberta",
+      "saida_visual": true
+    },
+    {
+      "id": "EDITORIAL-OBSIDIAN",
+      "titulo": "Publicação editorial (pipeline Obsidian v2.2)",
+      "tipo": "skill-plugin",
+      "camada": 3,
+      "modulo": "executar-cop:obsidian-editorial-pipeline",
+      "cv_ids": ["CV-EDITORIAL-001"],
+      "depende_de": ["ARVORE-VISUAL"],
+      "desbloqueia": [],
+      "porta": null,
+      "estado": "aberta",
+      "saida_visual": true
+    }
+  ],
+  "arestas": [
+    {
+      "dependency_id": "DEP-COP-001",
+      "source_artifact_id": "DEPENDENCY-ARCHITECT",
+      "target_artifact_id": "ARVORE-ROADMAP",
+      "relation": "alimenta",
+      "mandatory": true,
+      "gate_id": null,
+      "required_status": "concluida",
+      "status": "ativa",
+      "status_epistemico": "DIRECT",
+      "justificativa": "HANDOFF-AGENTES-001 §6: 16_REG_Dependencias + Arquitetura de Preenchimento passam a ser a fonte de entrada do estrutura.json. Vale no fluxo PEM-PIPELINE-PROPRIETARIO (entrada = Control Plane); fora dele, executar-arvore-roadmap aceita qualquer plano."
+    },
+    {
+      "dependency_id": "DEP-COP-002",
+      "source_artifact_id": "ARVORE-ROADMAP",
+      "target_artifact_id": "ARVORE-VISUAL",
+      "relation": "alimenta",
+      "mandatory": true,
+      "gate_id": null,
+      "required_status": "concluida",
+      "status": "ativa",
+      "status_epistemico": "DIRECT",
+      "justificativa": "HANDOFF-AGENTES-001 §6: ARVORE-VISUAL depende_de ARVORE-ROADMAP (visualização é projeção do estrutura.json). Vale no fluxo PEM-PIPELINE-PROPRIETARIO."
+    },
+    {
+      "dependency_id": "DEP-COP-003",
+      "source_artifact_id": "ARVORE-VISUAL",
+      "target_artifact_id": "EDITORIAL-OBSIDIAN",
+      "relation": "alimenta",
+      "mandatory": true,
+      "gate_id": null,
+      "required_status": "concluida",
+      "status": "ativa",
+      "status_epistemico": "DIRECT",
+      "justificativa": "HANDOFF-AGENTES-001 §6: EDITORIAL-OBSIDIAN depende_de ARVORE-VISUAL. Vale no fluxo PEM-PIPELINE-PROPRIETARIO; um ciclo editorial avulso (formulário próprio) não exige a árvore."
+    }
+  ]
+}
